@@ -1,0 +1,5 @@
+Data ^{
+    Script ^{
+        Mod_PirateBlackHole=1,Script.Mod_PirateBlackHole
+    }
+}

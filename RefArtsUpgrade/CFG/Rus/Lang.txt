@@ -1,0 +1,1139 @@
+Artefacts ^{
+    ArtAntigrav ^{
+        OnActCode ^{
+			
+            refartsupgrade2=if(ScriptItemActionType(t_OnStartAB))ExecuteCodeFromString(GenerateCodeStringFromBlock('Artefacts.RefArtsUpgrade.ABstartActCode'));
+            refartsupgrade3=if(ScriptItemActionType(t_OnItemEquip) || ScriptItemActionType(t_OnItemDeEquip))
+            refartsupgrade4 ^{
+                00=if(!FormCurShip())exit;
+                01=if(!ShipInHole(FormCurShip()))exit;
+                02=if(ScriptItemActionType(t_OnItemEquip))ExecuteCodeFromString(GenerateCodeStringFromBlock('Artefacts.RefArtsUpgrade.ABeqpActCode'));
+                03=if(ScriptItemActionType(t_OnItemDeEquip))ExecuteCodeFromString(GenerateCodeStringFromBlock('Artefacts.RefArtsUpgrade.ABdeeqpActCode'));
+            }
+        }
+        OnActCodeTypes=t_OnStartAB,t_OnItemEquip,t_OnItemDeEquip
+    }
+    ArtBio ^{
+        Name=Биомир
+        OnActCode ^{
+            refartsupgrade0=if(ScriptItemActionType(t_OnAnotherItem))
+            refartsupgrade1 ^{
+                00=dword rau_curitem=CurItem(), rau_anthitem=ScriptItemActObject1();
+                01=if(ItemType(rau_anthitem)!=t_Hull)exit;
+                02=int rau_bon1=FindBonusByNameInCfg('RefArtsPlus_Biomir');
+                03=if(ItemExtraSpecialsCountByType(rau_anthitem,rau_bon1))MessageBox(Format(CT('Artefacts.RefArtsUpgrade.ArtLimit'),'AnotherItemName',Name(rau_anthitem)));
+                03=if(ItemExtraSpecialsCountByType(rau_anthitem,rau_bon1))exit;
+                04=str text = 'Вы уверены, что хотите установить CurItemName в AnotherItemName?';
+                05=text=Format(text,'CurItemName',Name(rau_curitem),'AnotherItemName',Name(rau_anthitem));
+                06=if(!MessageBoxYesNo(text))exit;
+                11=ItemExtraSpecialsAddByType(rau_anthitem,rau_bon1);
+                12=Sound('Sound.Repair');
+                13=ScriptItemActParam(1);
+            }
+        }
+        OnActCodeTypes=t_OnAnotherItem
+    }
+    ArtBomb ^{
+        Name=Кварковая бомба
+        OnActCode ^{
+            refartsupgrade0=if(ScriptItemActionType(t_OnAnotherItem))
+            refartsupgrade1 ^{
+                00=dword rau_curitem=CurItem(), rau_anthitem=ScriptItemActObject1();
+                01=if(ItemType(rau_anthitem)!=t_Hull)exit;
+                04=str text = 'Вы уверены, что хотите установить CurItemName в AnotherItemName?';
+                05=text=Format(text,'CurItemName',Name(rau_curitem),'AnotherItemName',Name(rau_anthitem));
+                06=if(!MessageBoxYesNo(text))exit;
+                07=if(!ShipInNormalSpace(ScriptItemActShip()))CustomLose(CT('Artefacts.RefArtsUpgrade.ArtBomb_End'));
+                08=ShipAddCustomShipInfo(ScriptItemActShip(),'RefArtsUpgrade_ArtBomb_Infos','NoShow');
+                09=ItemExtraSpecialsAddByType(rau_anthitem,FindBonusByNameInCfg('RefArtsPlus_Kwark'));
+                10=ScriptItemActParam(1);
+            }
+        }
+        OnActCodeTypes=t_OnAnotherItem
+        Text=При взрыве наносит всем материальным объектам значительные повреждения.
+        Text= <br>Не рекомендуем разбирать и монтировать на корабль...
+    }
+    ArtDecelerate ^{
+        OnActCode ^{
+            refartsupgrade2=if(ScriptItemActionType(t_OnStartAB))ExecuteCodeFromString(GenerateCodeStringFromBlock('Artefacts.RefArtsUpgrade.ABstartActCode'));
+            refartsupgrade3=if(ScriptItemActionType(t_OnItemEquip) || ScriptItemActionType(t_OnItemDeEquip))
+            refartsupgrade4 ^{
+                00=if(!FormCurShip())exit;
+                01=if(!ShipInHole(FormCurShip()))exit;
+                02=if(ScriptItemActionType(t_OnItemEquip))ExecuteCodeFromString(GenerateCodeStringFromBlock('Artefacts.RefArtsUpgrade.ABeqpActCode'));
+                03=if(ScriptItemActionType(t_OnItemDeEquip))ExecuteCodeFromString(GenerateCodeStringFromBlock('Artefacts.RefArtsUpgrade.ABdeeqpActCode'));
+            }
+        }
+        OnActCodeTypes=t_OnStartAB,t_OnItemEquip,t_OnItemDeEquip
+    }
+    ArtDef ^{
+        Name=Поляризатор
+        OnActCode ^{
+            refartsupgrade0=if(ScriptItemActionType(t_OnAnotherItem))
+            refartsupgrade1 ^{
+                00=dword rau_curitem=CurItem(), rau_anthitem=ScriptItemActObject1();
+                01=if(ItemType(rau_anthitem)!=t_DefGenerator)exit;
+                02=int rau_bon1=FindBonusByNameInCfg('RefArtsPlus_Shield1'), rau_bon2=FindBonusByNameInCfg('RefArtsPlus_Shield2'), rau_bon3=FindBonusByNameInCfg('RefArtsPlus_Shield3');
+                03=if(ItemExtraSpecialsCountByType(rau_anthitem,rau_bon3))MessageBox(Format(CT('Artefacts.RefArtsUpgrade.ArtLimit'),'AnotherItemName',Name(rau_anthitem)));
+                03=if(ItemExtraSpecialsCountByType(rau_anthitem,rau_bon3))exit;
+                04=str text = 'Вы уверены, что хотите установить CurItemName в AnotherItemName?';
+                05=text=Format(text,'CurItemName',Name(rau_curitem),'AnotherItemName',Name(rau_anthitem));
+                06=if(!MessageBoxYesNo(text))exit;
+                07=if(ItemExtraSpecialsCountByType(rau_anthitem,rau_bon2))
+                08 ^{
+                    00=ItemExtraSpecialsDeleteByType(rau_anthitem,rau_bon2);
+                    01=ItemExtraSpecialsAddByType(rau_anthitem,rau_bon3);
+                }
+                09=else if(ItemExtraSpecialsCountByType(rau_anthitem,rau_bon1))
+                10 ^{
+                    00=ItemExtraSpecialsDeleteByType(rau_anthitem,rau_bon1);
+                    01=ItemExtraSpecialsAddByType(rau_anthitem,rau_bon2);
+                }
+                11=else if(!ItemExtraSpecialsCountByType(rau_anthitem,rau_bon1))ItemExtraSpecialsAddByType(rau_anthitem,rau_bon1);
+                12=Sound('Sound.Repair');
+                13=ScriptItemActParam(1);
+            }
+            refartsupgrade2=if(ScriptItemActionType(t_OnStartAB))ExecuteCodeFromString(GenerateCodeStringFromBlock('Artefacts.RefArtsUpgrade.ABstartActCode'));
+            refartsupgrade3=if(ScriptItemActionType(t_OnItemEquip) || ScriptItemActionType(t_OnItemDeEquip))
+            refartsupgrade4 ^{
+                00=if(!FormCurShip())exit;
+                01=if(!ShipInHole(FormCurShip()))exit;
+                02=if(ScriptItemActionType(t_OnItemEquip))ExecuteCodeFromString(GenerateCodeStringFromBlock('Artefacts.RefArtsUpgrade.ABeqpActCode'));
+                03=if(ScriptItemActionType(t_OnItemDeEquip))ExecuteCodeFromString(GenerateCodeStringFromBlock('Artefacts.RefArtsUpgrade.ABdeeqpActCode'));
+            }
+        }
+        OnActCodeTypes=t_OnAnotherItem,t_OnStartAB,t_OnItemEquip,t_OnItemDeEquip
+    }
+    ArtDefToEnergy ^{
+        OnActCode ^{
+            refartsupgrade2=if(ScriptItemActionType(t_OnStartAB))ExecuteCodeFromString(GenerateCodeStringFromBlock('Artefacts.RefArtsUpgrade.ABstartActCode'));
+            refartsupgrade3=if(ScriptItemActionType(t_OnItemEquip) || ScriptItemActionType(t_OnItemDeEquip))
+            refartsupgrade4 ^{
+                00=if(!FormCurShip())exit;
+                01=if(!ShipInHole(FormCurShip()))exit;
+                02=if(ScriptItemActionType(t_OnItemEquip))ExecuteCodeFromString(GenerateCodeStringFromBlock('Artefacts.RefArtsUpgrade.ABeqpActCode'));
+                03=if(ScriptItemActionType(t_OnItemDeEquip))ExecuteCodeFromString(GenerateCodeStringFromBlock('Artefacts.RefArtsUpgrade.ABdeeqpActCode'));
+            }
+        }
+        OnActCodeTypes=t_OnStartAB,t_OnItemEquip,t_OnItemDeEquip
+    }
+    ArtDroid ^{
+        Name=Дроид младший
+        OnActCode ^{
+            refartsupgrade0=if(ScriptItemActionType(t_OnAnotherItem))
+            refartsupgrade1 ^{
+                00=dword rau_curitem=CurItem(), rau_anthitem=ScriptItemActObject1();
+                01=if(ItemType(rau_anthitem)!=t_RepairRobot)exit;
+                02=int rau_bon1=FindBonusByNameInCfg('RefArtsPlus_Droid1'), rau_bon2=FindBonusByNameInCfg('RefArtsPlus_Droid2'), rau_bon3=FindBonusByNameInCfg('RefArtsPlus_Droid3');
+                03=if(ItemExtraSpecialsCountByType(rau_anthitem,rau_bon3))MessageBox(Format(CT('Artefacts.RefArtsUpgrade.ArtLimit'),'AnotherItemName',Name(rau_anthitem)));
+                03=if(ItemExtraSpecialsCountByType(rau_anthitem,rau_bon3))exit;
+                04=str text = 'Вы уверены, что хотите установить CurItemName в AnotherItemName?';
+                05=text=Format(text,'CurItemName',Name(rau_curitem),'AnotherItemName',Name(rau_anthitem));
+                06=if(!MessageBoxYesNo(text))exit;
+                07=if(ItemExtraSpecialsCountByType(rau_anthitem,rau_bon2))
+                08 ^{
+                    00=ItemExtraSpecialsDeleteByType(rau_anthitem,rau_bon2);
+                    01=ItemExtraSpecialsAddByType(rau_anthitem,rau_bon3);
+                }
+                09=else if(ItemExtraSpecialsCountByType(rau_anthitem,rau_bon1))
+                10 ^{
+                    00=ItemExtraSpecialsDeleteByType(rau_anthitem,rau_bon1);
+                    01=ItemExtraSpecialsAddByType(rau_anthitem,rau_bon2);
+                }
+                11=else if(!ItemExtraSpecialsCountByType(rau_anthitem,rau_bon1))ItemExtraSpecialsAddByType(rau_anthitem,rau_bon1);
+                12=Sound('Sound.Repair');
+                13=ScriptItemActParam(1);
+            }
+        }
+        OnActCodeTypes=t_OnAnotherItem
+    }
+    ArtEnergyDef ^{
+        Name=Проглот
+        OnActCode ^{
+            refartsupgrade0=if(ScriptItemActionType(t_OnAnotherItem))
+            refartsupgrade1 ^{
+                00=dword rau_curitem=CurItem(), rau_anthitem=ScriptItemActObject1();
+                01=if(ItemType(rau_anthitem)!=t_Hull)exit;
+                02=int rau_bon1=FindBonusByNameInCfg('RefArtsPlus_Proglot');
+                03=if(ItemExtraSpecialsCountByType(rau_anthitem,rau_bon1))MessageBox(Format(CT('Artefacts.RefArtsUpgrade.ArtLimit'),'AnotherItemName',Name(rau_anthitem)));
+                03=if(ItemExtraSpecialsCountByType(rau_anthitem,rau_bon1))exit;
+                04=str text = 'Вы уверены, что хотите установить CurItemName в AnotherItemName?';
+                05=text=Format(text,'CurItemName',Name(rau_curitem),'AnotherItemName',Name(rau_anthitem));
+                06=if(!MessageBoxYesNo(text))exit;
+                11=ItemExtraSpecialsAddByType(rau_anthitem,rau_bon1);
+                12=Sound('Sound.Repair');
+                13=ScriptItemActParam(1);
+            }
+            refartsupgrade2=if(ScriptItemActionType(t_OnStartAB))ExecuteCodeFromString(GenerateCodeStringFromBlock('Artefacts.RefArtsUpgrade.ABstartActCode'));
+            refartsupgrade3=if(ScriptItemActionType(t_OnItemEquip) || ScriptItemActionType(t_OnItemDeEquip))
+            refartsupgrade4 ^{
+                00=if(!FormCurShip())exit;
+                01=if(!ShipInHole(FormCurShip()))exit;
+                02=if(ScriptItemActionType(t_OnItemEquip))ExecuteCodeFromString(GenerateCodeStringFromBlock('Artefacts.RefArtsUpgrade.ABeqpActCode'));
+                03=if(ScriptItemActionType(t_OnItemDeEquip))ExecuteCodeFromString(GenerateCodeStringFromBlock('Artefacts.RefArtsUpgrade.ABdeeqpActCode'));
+            }
+        }
+        OnActCodeTypes=t_OnAnotherItem,t_OnStartAB,t_OnItemEquip,t_OnItemDeEquip
+    }
+    ArtEnergyPulse ^{
+        Name=Пятерик
+        OnActCode ^{
+            refartsupgrade0=if(ScriptItemActionType(t_OnAnotherItem))
+            refartsupgrade1 ^{
+                00=dword rau_curitem=CurItem(), rau_anthitem=ScriptItemActObject1();
+                01=if(ItemType(rau_anthitem)<t_Weapon1 || ItemType(rau_anthitem)>t_CustomWeapon)exit;
+                01=if(GetEquipmentStats(rau_anthitem,3)!=0)exit;
+                02=int rau_bon1=FindBonusByNameInCfg('RefArtsPlus_Pyaterik');
+                03=if(ItemExtraSpecialsCountByType(rau_anthitem,rau_bon1))MessageBox(Format(CT('Artefacts.RefArtsUpgrade.ArtLimit'),'AnotherItemName',Name(rau_anthitem)));
+                03=if(ItemExtraSpecialsCountByType(rau_anthitem,rau_bon1))exit;
+                04=str text = 'Вы уверены, что хотите установить CurItemName в AnotherItemName?';
+                05=text=Format(text,'CurItemName',Name(rau_curitem),'AnotherItemName',Name(rau_anthitem));
+                06=if(!MessageBoxYesNo(text))exit;
+                11=ItemExtraSpecialsAddByType(rau_anthitem,rau_bon1);
+                12=Sound('Sound.Repair');
+                13=ScriptItemActParam(1);
+            }
+            refartsupgrade2=if(ScriptItemActionType(t_OnStartAB))ExecuteCodeFromString(GenerateCodeStringFromBlock('Artefacts.RefArtsUpgrade.ABstartActCode'));
+            refartsupgrade3=if(ScriptItemActionType(t_OnItemEquip) || ScriptItemActionType(t_OnItemDeEquip))
+            refartsupgrade4 ^{
+                00=if(!FormCurShip())exit;
+                01=if(!ShipInHole(FormCurShip()))exit;
+                02=if(ScriptItemActionType(t_OnItemEquip))ExecuteCodeFromString(GenerateCodeStringFromBlock('Artefacts.RefArtsUpgrade.ABeqpActCode'));
+                03=if(ScriptItemActionType(t_OnItemDeEquip))ExecuteCodeFromString(GenerateCodeStringFromBlock('Artefacts.RefArtsUpgrade.ABdeeqpActCode'));
+            }
+        }
+        OnActCodeTypes=t_OnAnotherItem,t_OnStartAB,t_OnItemEquip,t_OnItemDeEquip
+    }
+    ArtFastRacks ^{
+        Name=Ралс
+        OnActCode ^{
+            refartsupgrade0=if(ScriptItemActionType(t_OnAnotherItem))
+            refartsupgrade1 ^{
+                00=dword rau_curitem=CurItem(), rau_anthitem=ScriptItemActObject1();
+                01=if(ItemType(rau_anthitem)<t_Weapon1 || ItemType(rau_anthitem)>t_CustomWeapon)exit;
+                01=if(GetEquipmentStats(rau_anthitem,3)!=2)exit;
+                02=int rau_bon1=FindBonusByNameInCfg('RefArtsPlus_Rals');
+                03=if(ItemExtraSpecialsCountByType(rau_anthitem,rau_bon1))MessageBox(Format(CT('Artefacts.RefArtsUpgrade.ArtLimit'),'AnotherItemName',Name(rau_anthitem)));
+                03=if(ItemExtraSpecialsCountByType(rau_anthitem,rau_bon1))exit;
+                04=str text = 'Вы уверены, что хотите установить CurItemName в AnotherItemName?';
+                05=text=Format(text,'CurItemName',Name(rau_curitem),'AnotherItemName',Name(rau_anthitem));
+                06=if(!MessageBoxYesNo(text))exit;
+                11=ItemExtraSpecialsAddByType(rau_anthitem,rau_bon1);
+                12=Sound('Sound.Repair');
+                13=ScriptItemActParam(1);
+            }
+            refartsupgrade2=if(ScriptItemActionType(t_OnStartAB))ExecuteCodeFromString(GenerateCodeStringFromBlock('Artefacts.RefArtsUpgrade.ABstartActCode'));
+            refartsupgrade3=if(ScriptItemActionType(t_OnItemEquip) || ScriptItemActionType(t_OnItemDeEquip))
+            refartsupgrade4 ^{
+                00=if(!FormCurShip())exit;
+                01=if(!ShipInHole(FormCurShip()))exit;
+                02=if(ScriptItemActionType(t_OnItemEquip))ExecuteCodeFromString(GenerateCodeStringFromBlock('Artefacts.RefArtsUpgrade.ABeqpActCode'));
+                03=if(ScriptItemActionType(t_OnItemDeEquip))ExecuteCodeFromString(GenerateCodeStringFromBlock('Artefacts.RefArtsUpgrade.ABdeeqpActCode'));
+            }
+        }
+        OnActCodeTypes=t_OnAnotherItem,t_OnStartAB,t_OnItemEquip,t_OnItemDeEquip
+    }
+    ArtForsage ^{
+        Name=Обливионный коннектор
+        OnActCode ^{
+            refartsupgrade0=if(ScriptItemActionType(t_OnAnotherItem))
+            refartsupgrade1 ^{
+                00=dword rau_curitem=CurItem(), rau_anthitem=ScriptItemActObject1();
+                01=if(ItemType(rau_anthitem)!=t_Engine)exit;
+                02=int rau_bon1=FindBonusByNameInCfg('RefArtsPlus_Oblivion');
+                03=if(ItemExtraSpecialsCountByType(rau_anthitem,rau_bon1))MessageBox(Format(CT('Artefacts.RefArtsUpgrade.ArtLimit'),'AnotherItemName',Name(rau_anthitem)));
+                03=if(ItemExtraSpecialsCountByType(rau_anthitem,rau_bon1))exit;
+                04=str text = 'Вы уверены, что хотите установить CurItemName в AnotherItemName?';
+                05=text=Format(text,'CurItemName',Name(rau_curitem),'AnotherItemName',Name(rau_anthitem));
+                06=if(!MessageBoxYesNo(text))exit;
+                11=ItemExtraSpecialsAddByType(rau_anthitem,rau_bon1);
+                12=Sound('Sound.Repair');
+                13=ScriptItemActParam(1);
+            }
+            refartsupgrade2=if(ScriptItemActionType(t_OnStartAB))ExecuteCodeFromString(GenerateCodeStringFromBlock('Artefacts.RefArtsUpgrade.ABstartActCode'));
+            refartsupgrade3=if(ScriptItemActionType(t_OnItemEquip) || ScriptItemActionType(t_OnItemDeEquip))
+            refartsupgrade4 ^{
+                00=if(!FormCurShip())exit;
+                01=if(!ShipInHole(FormCurShip()))exit;
+                02=if(ScriptItemActionType(t_OnItemEquip))ExecuteCodeFromString(GenerateCodeStringFromBlock('Artefacts.RefArtsUpgrade.ABeqpActCode'));
+                03=if(ScriptItemActionType(t_OnItemDeEquip))ExecuteCodeFromString(GenerateCodeStringFromBlock('Artefacts.RefArtsUpgrade.ABdeeqpActCode'));
+            }
+        }
+        OnActCodeTypes=t_OnAnotherItem,t_OnStartAB,t_OnItemEquip,t_OnItemDeEquip
+    }
+    ArtGiperJump ^{
+        Name=Гипергенератор
+        OnActCode ^{
+            refartsupgrade0=if(ScriptItemActionType(t_OnAnotherItem))
+            refartsupgrade1 ^{
+                00=dword rau_curitem=CurItem(), rau_anthitem=ScriptItemActObject1(), int rau_bon1;
+                01=if(ItemType(rau_anthitem)!=t_Engine)exit;
+				02=if(ItemOwner(rau_anthitem) == None)
+				03 ^{
+					00=rau_bon1=FindBonusByNameInCfg('RefArtsPlus_Hiper_hole');
+				}
+				04=else 
+				05 ^{
+					00=rau_bon1=FindBonusByNameInCfg('RefArtsPlus_Hiper');
+				}
+                06=if(ItemExtraSpecialsCountByType(rau_anthitem,rau_bon1))MessageBox(Format(CT('Artefacts.RefArtsUpgrade.ArtLimit'),'AnotherItemName',Name(rau_anthitem)));
+                07=if(ItemExtraSpecialsCountByType(rau_anthitem,rau_bon1))exit;
+                08=str text = 'Вы уверены, что хотите установить CurItemName в AnotherItemName?';
+                09=text=Format(text,'CurItemName',Name(rau_curitem),'AnotherItemName',Name(rau_anthitem));
+                10=if(!MessageBoxYesNo(text))exit;
+                11=ItemExtraSpecialsAddByType(rau_anthitem,rau_bon1);
+                12=Sound('Sound.Repair');
+                13=ScriptItemActParam(1);
+            }
+            refartsupgrade2=if(ScriptItemActionType(t_OnStartAB))ExecuteCodeFromString(GenerateCodeStringFromBlock('Artefacts.RefArtsUpgrade.ABstartActCode'));
+            refartsupgrade3=if(ScriptItemActionType(t_OnItemEquip) || ScriptItemActionType(t_OnItemDeEquip))
+            refartsupgrade4 ^{
+                00=if(!FormCurShip())exit;
+                01=if(!ShipInHole(FormCurShip()))exit;
+                02=if(ScriptItemActionType(t_OnItemEquip))ExecuteCodeFromString(GenerateCodeStringFromBlock('Artefacts.RefArtsUpgrade.ABeqpActCode'));
+                03=if(ScriptItemActionType(t_OnItemDeEquip))ExecuteCodeFromString(GenerateCodeStringFromBlock('Artefacts.RefArtsUpgrade.ABdeeqpActCode'));
+            }
+        }
+        OnActCodeTypes=t_OnAnotherItem,t_OnStartAB,t_OnItemEquip,t_OnItemDeEquip
+    }
+    ArtHull ^{
+        OnActCode ^{
+            refartsupgrade2=if(ScriptItemActionType(t_OnStartAB))ExecuteCodeFromString(GenerateCodeStringFromBlock('Artefacts.RefArtsUpgrade.ABstartActCode'));
+            refartsupgrade3=if(ScriptItemActionType(t_OnItemEquip) || ScriptItemActionType(t_OnItemDeEquip))
+            refartsupgrade4 ^{
+                00=if(!FormCurShip())exit;
+                01=if(!ShipInHole(FormCurShip()))exit;
+                02=if(ScriptItemActionType(t_OnItemEquip))ExecuteCodeFromString(GenerateCodeStringFromBlock('Artefacts.RefArtsUpgrade.ABeqpActCode'));
+                03=if(ScriptItemActionType(t_OnItemDeEquip))ExecuteCodeFromString(GenerateCodeStringFromBlock('Artefacts.RefArtsUpgrade.ABdeeqpActCode'));
+            }
+        }
+        OnActCodeTypes=t_OnStartAB,t_OnItemEquip,t_OnItemDeEquip
+    }
+    ArtMiniExpl ^{
+        OnActCode ^{
+            refartsupgrade2=if(ScriptItemActionType(t_OnStartAB))ExecuteCodeFromString(GenerateCodeStringFromBlock('Artefacts.RefArtsUpgrade.ABstartActCode'));
+            refartsupgrade3=if(ScriptItemActionType(t_OnItemEquip) || ScriptItemActionType(t_OnItemDeEquip))
+            refartsupgrade4 ^{
+                00=if(!FormCurShip())exit;
+                01=if(!ShipInHole(FormCurShip()))exit;
+                02=if(ScriptItemActionType(t_OnItemEquip))ExecuteCodeFromString(GenerateCodeStringFromBlock('Artefacts.RefArtsUpgrade.ABeqpActCode'));
+                03=if(ScriptItemActionType(t_OnItemDeEquip))ExecuteCodeFromString(GenerateCodeStringFromBlock('Artefacts.RefArtsUpgrade.ABdeeqpActCode'));
+            }
+        }
+        OnActCodeTypes=t_OnStartAB,t_OnItemEquip,t_OnItemDeEquip
+    }
+    ArtMissileDef ^{
+        Name=Ракетанг
+        OnActCode ^{
+            refartsupgrade0=if(ScriptItemActionType(t_OnAnotherItem))
+            refartsupgrade1 ^{
+                00=dword rau_curitem=CurItem(), rau_anthitem=ScriptItemActObject1();
+                01=if(ItemType(rau_anthitem)!=t_Hull)exit;
+                02=int rau_bon1=FindBonusByNameInCfg('RefArtsPlus_Racetang');
+                03=if(ItemExtraSpecialsCountByType(rau_anthitem,rau_bon1))MessageBox(Format(CT('Artefacts.RefArtsUpgrade.ArtLimit'),'AnotherItemName',Name(rau_anthitem)));
+                03=if(ItemExtraSpecialsCountByType(rau_anthitem,rau_bon1))exit;
+                04=str text = 'Вы уверены, что хотите установить CurItemName в AnotherItemName?';
+                05=text=Format(text,'CurItemName',Name(rau_curitem),'AnotherItemName',Name(rau_anthitem));
+                06=if(!MessageBoxYesNo(text))exit;
+                11=ItemExtraSpecialsAddByType(rau_anthitem,rau_bon1);
+                12=Sound('Sound.Repair');
+                13=ScriptItemActParam(1);
+            }
+            refartsupgrade2=if(ScriptItemActionType(t_OnStartAB))ExecuteCodeFromString(GenerateCodeStringFromBlock('Artefacts.RefArtsUpgrade.ABstartActCode'));
+            refartsupgrade3=if(ScriptItemActionType(t_OnItemEquip) || ScriptItemActionType(t_OnItemDeEquip))
+            refartsupgrade4 ^{
+                00=if(!FormCurShip())exit;
+                01=if(!ShipInHole(FormCurShip()))exit;
+                02=if(ScriptItemActionType(t_OnItemEquip))ExecuteCodeFromString(GenerateCodeStringFromBlock('Artefacts.RefArtsUpgrade.ABeqpActCode'));
+                03=if(ScriptItemActionType(t_OnItemDeEquip))ExecuteCodeFromString(GenerateCodeStringFromBlock('Artefacts.RefArtsUpgrade.ABdeeqpActCode'));
+            }
+        }
+        OnActCodeTypes=t_OnAnotherItem,t_OnStartAB,t_OnItemEquip,t_OnItemDeEquip
+        OnUseCode ^{
+            0=OnUseCodeMissileDef();
+        }
+    }
+    ArtNano ^{
+        Name=Нанитоиды
+        OnActCode ^{
+            refartsupgrade0=if(ScriptItemActionType(t_OnAnotherItem))
+            refartsupgrade1 ^{
+                00=dword rau_curitem=CurItem(), rau_anthitem=ScriptItemActObject1();
+                01=if(ItemType(rau_anthitem)<t_FuelTanks || ItemType(rau_anthitem)>t_CustomWeapon)exit;
+                02=int rau_bon1=FindBonusByNameInCfg('RefArtsPlus_NANI');
+                03=if(ItemExtraSpecialsCountByType(rau_anthitem,rau_bon1))MessageBox(Format(CT('Artefacts.RefArtsUpgrade.ArtLimit'),'AnotherItemName',Name(rau_anthitem)));
+                03=if(ItemExtraSpecialsCountByType(rau_anthitem,rau_bon1))exit;
+                04=str text = 'Вы уверены, что хотите установить CurItemName в AnotherItemName?';
+                05=text=Format(text,'CurItemName',Name(rau_curitem),'AnotherItemName',Name(rau_anthitem));
+                06=if(!MessageBoxYesNo(text))exit;
+                11=ItemExtraSpecialsAddByType(rau_anthitem,rau_bon1);
+                12=Sound('Sound.Repair');
+                13=ScriptItemActParam(1);
+            }
+            refartsupgrade2=if(ScriptItemActionType(t_OnStartAB))ExecuteCodeFromString(GenerateCodeStringFromBlock('Artefacts.RefArtsUpgrade.ABstartActCode'));
+            refartsupgrade3=if(ScriptItemActionType(t_OnItemEquip) || ScriptItemActionType(t_OnItemDeEquip))
+            refartsupgrade4 ^{
+                00=if(!FormCurShip())exit;
+                01=if(!ShipInHole(FormCurShip()))exit;
+                02=if(ScriptItemActionType(t_OnItemEquip))ExecuteCodeFromString(GenerateCodeStringFromBlock('Artefacts.RefArtsUpgrade.ABeqpActCode'));
+                03=if(ScriptItemActionType(t_OnItemDeEquip))ExecuteCodeFromString(GenerateCodeStringFromBlock('Artefacts.RefArtsUpgrade.ABdeeqpActCode'));
+            }
+        }
+        OnActCodeTypes=t_OnAnotherItem,t_OnStartAB,t_OnItemEquip,t_OnItemDeEquip
+        RepairItem=Хорошая новость - нанитоиды подлатали <Name>!
+    }
+    ArtPDTurret ^{
+        Name=а'Эгис
+        OnActCode ^{
+            refartsupgrade0=if(ScriptItemActionType(t_OnAnotherItem))
+            refartsupgrade1 ^{
+                00=dword rau_curitem=CurItem(), rau_anthitem=ScriptItemActObject1();
+                01=if(ItemType(rau_anthitem)!=t_Hull)exit;
+                02=int rau_bon1=FindBonusByNameInCfg('RefArtsPlus_PRO1'), rau_bon2=FindBonusByNameInCfg('RefArtsPlus_PRO2'), rau_bon3=FindBonusByNameInCfg('RefArtsPlus_PRO3');
+                03=if(ItemExtraSpecialsCountByType(rau_anthitem,rau_bon3))MessageBox(Format(CT('Artefacts.RefArtsUpgrade.ArtLimit'),'AnotherItemName',Name(rau_anthitem)));
+                03=if(ItemExtraSpecialsCountByType(rau_anthitem,rau_bon3))exit;
+                04=str text = 'Вы уверены, что хотите установить CurItemName в AnotherItemName?';
+                05=text=Format(text,'CurItemName',Name(rau_curitem),'AnotherItemName',Name(rau_anthitem));
+                06=if(!MessageBoxYesNo(text))exit;
+                07=if(ItemExtraSpecialsCountByType(rau_anthitem,rau_bon2))
+                08 ^{
+                    00=ItemExtraSpecialsDeleteByType(rau_anthitem,rau_bon2);
+                    01=ItemExtraSpecialsAddByType(rau_anthitem,rau_bon3);
+                }
+                09=else if(ItemExtraSpecialsCountByType(rau_anthitem,rau_bon1))
+                10 ^{
+                    00=ItemExtraSpecialsDeleteByType(rau_anthitem,rau_bon1);
+                    01=ItemExtraSpecialsAddByType(rau_anthitem,rau_bon2);
+                }
+                11=else if(!ItemExtraSpecialsCountByType(rau_anthitem,rau_bon1))ItemExtraSpecialsAddByType(rau_anthitem,rau_bon1);
+                12=Sound('Sound.Repair');
+                13=ScriptItemActParam(1);
+            }
+            refartsupgrade2=if(ScriptItemActionType(t_OnStartAB))ExecuteCodeFromString(GenerateCodeStringFromBlock('Artefacts.RefArtsUpgrade.ABstartActCode'));
+            refartsupgrade3=if(ScriptItemActionType(t_OnItemEquip) || ScriptItemActionType(t_OnItemDeEquip))
+            refartsupgrade4 ^{
+                00=if(!FormCurShip())exit;
+                01=if(!ShipInHole(FormCurShip()))exit;
+                02=if(ScriptItemActionType(t_OnItemEquip))ExecuteCodeFromString(GenerateCodeStringFromBlock('Artefacts.RefArtsUpgrade.ABeqpActCode'));
+                03=if(ScriptItemActionType(t_OnItemDeEquip))ExecuteCodeFromString(GenerateCodeStringFromBlock('Artefacts.RefArtsUpgrade.ABdeeqpActCode'));
+            }
+        }
+        OnActCodeTypes=t_OnAnotherItem,t_OnStartAB,t_OnItemEquip,t_OnItemDeEquip
+    }
+    ArtPower ^{
+        Name=Отморозки
+        OnActCode ^{
+            refartsupgrade0=if(ScriptItemActionType(t_OnAnotherItem))
+            refartsupgrade1 ^{
+                00=dword rau_curitem=CurItem(), rau_anthitem=ScriptItemActObject1();
+                01=if(ItemType(rau_anthitem)!=t_Hull)exit;
+                02=int rau_bon1=FindBonusByNameInCfg('RefArtsPlus_Otmorozki');
+                03=if(ItemExtraSpecialsCountByType(rau_anthitem,rau_bon1))MessageBox(Format(CT('Artefacts.RefArtsUpgrade.ArtLimitOtmorozki'),'AnotherItemName',Name(rau_anthitem)));
+                03=if(ItemExtraSpecialsCountByType(rau_anthitem,rau_bon1))exit;
+                04=str text = 'Вы уверены, что хотите установить CurItemName в AnotherItemName?';
+                05=text=Format(text,'CurItemName',Name(rau_curitem),'AnotherItemName',Name(rau_anthitem));
+                06=if(!MessageBoxYesNo(text))exit;
+                11=ItemExtraSpecialsAddByType(rau_anthitem,rau_bon1);
+                12=Sound('Sound.Repair');
+                13=ScriptItemActParam(1);
+            }
+        }
+        OnActCodeTypes=t_OnAnotherItem
+    }
+    ArtRadar ^{
+        Name=Пролонгер
+        OnActCode ^{
+            refartsupgrade0=if(ScriptItemActionType(t_OnAnotherItem))
+            refartsupgrade1 ^{
+                00=dword rau_curitem=CurItem(), rau_anthitem=ScriptItemActObject1();
+                01=if(ItemType(rau_anthitem)!=t_Radar)exit;
+                02=int rau_bon1=FindBonusByNameInCfg('RefArtsPlus_Radar1'), rau_bon2=FindBonusByNameInCfg('RefArtsPlus_Radar2'), rau_bon3=FindBonusByNameInCfg('RefArtsPlus_Radar3');
+                03=if(ItemExtraSpecialsCountByType(rau_anthitem,rau_bon3))MessageBox(Format(CT('Artefacts.RefArtsUpgrade.ArtLimit'),'AnotherItemName',Name(rau_anthitem)));
+                03=if(ItemExtraSpecialsCountByType(rau_anthitem,rau_bon3))exit;
+                04=str text = 'Вы уверены, что хотите установить CurItemName в AnotherItemName?';
+                05=text=Format(text,'CurItemName',Name(rau_curitem),'AnotherItemName',Name(rau_anthitem));
+                06=if(!MessageBoxYesNo(text))exit;
+                07=if(ItemExtraSpecialsCountByType(rau_anthitem,rau_bon2))
+                08 ^{
+                    00=ItemExtraSpecialsDeleteByType(rau_anthitem,rau_bon2);
+                    01=ItemExtraSpecialsAddByType(rau_anthitem,rau_bon3);
+                }
+                09=else if(ItemExtraSpecialsCountByType(rau_anthitem,rau_bon1))
+                10 ^{
+                    00=ItemExtraSpecialsDeleteByType(rau_anthitem,rau_bon1);
+                    01=ItemExtraSpecialsAddByType(rau_anthitem,rau_bon2);
+                }
+                11=else if(!ItemExtraSpecialsCountByType(rau_anthitem,rau_bon1))ItemExtraSpecialsAddByType(rau_anthitem,rau_bon1);
+                12=Sound('Sound.Repair');
+                13=ScriptItemActParam(1);
+            }
+        }
+        OnActCodeTypes=t_OnAnotherItem
+    }
+    ArtScaner ^{
+        Name=Сканерный кэш
+        OnActCode ^{
+            refartsupgrade0=if(ScriptItemActionType(t_OnAnotherItem))
+            refartsupgrade1 ^{
+                00=dword rau_curitem=CurItem(), rau_anthitem=ScriptItemActObject1();
+                01=if(ItemType(rau_anthitem)!=t_Scaner)exit;
+                02=int rau_bon1=FindBonusByNameInCfg('RefArtsPlus_Scaner1'), rau_bon2=FindBonusByNameInCfg('RefArtsPlus_Scaner2'), rau_bon3=FindBonusByNameInCfg('RefArtsPlus_Scaner3');
+                03=if(ItemExtraSpecialsCountByType(rau_anthitem,rau_bon3))MessageBox(Format(CT('Artefacts.RefArtsUpgrade.ArtLimit'),'AnotherItemName',Name(rau_anthitem)));
+                03=if(ItemExtraSpecialsCountByType(rau_anthitem,rau_bon3))exit;
+                04=str text = 'Вы уверены, что хотите установить CurItemName в AnotherItemName?';
+                05=text=Format(text,'CurItemName',Name(rau_curitem),'AnotherItemName',Name(rau_anthitem));
+                06=if(!MessageBoxYesNo(text))exit;
+                07=if(ItemExtraSpecialsCountByType(rau_anthitem,rau_bon2))
+                08 ^{
+                    00=ItemExtraSpecialsDeleteByType(rau_anthitem,rau_bon2);
+                    01=ItemExtraSpecialsAddByType(rau_anthitem,rau_bon3);
+                }
+                09=else if(ItemExtraSpecialsCountByType(rau_anthitem,rau_bon1))
+                10 ^{
+                    00=ItemExtraSpecialsDeleteByType(rau_anthitem,rau_bon1);
+                    01=ItemExtraSpecialsAddByType(rau_anthitem,rau_bon2);
+                }
+                11=else if(!ItemExtraSpecialsCountByType(rau_anthitem,rau_bon1))ItemExtraSpecialsAddByType(rau_anthitem,rau_bon1);
+                12=Sound('Sound.Repair');
+                13=ScriptItemActParam(1);
+            }
+        }
+        OnActCodeTypes=t_OnAnotherItem
+    }
+    ArtSpeed ^{
+        Name=Пси-ускоритель материи
+        OnActCode ^{
+            refartsupgrade0=if(ScriptItemActionType(t_OnAnotherItem))
+            refartsupgrade1 ^{
+                00=dword rau_curitem=CurItem(), rau_anthitem=ScriptItemActObject1();
+                01=if(ItemType(rau_anthitem)!=t_Engine)exit;
+                02=int rau_bon1=FindBonusByNameInCfg('RefArtsPlus_Psi');
+                03=if(ItemExtraSpecialsCountByType(rau_anthitem,rau_bon1))MessageBox(Format(CT('Artefacts.RefArtsUpgrade.ArtLimit'),'AnotherItemName',Name(rau_anthitem)));
+                03=if(ItemExtraSpecialsCountByType(rau_anthitem,rau_bon1))exit;
+                04=str text = 'Вы уверены, что хотите установить CurItemName в AnotherItemName?';
+                05=text=Format(text,'CurItemName',Name(rau_curitem),'AnotherItemName',Name(rau_anthitem));
+                06=if(!MessageBoxYesNo(text))exit;
+                11=ItemExtraSpecialsAddByType(rau_anthitem,rau_bon1);
+                12=Sound('Sound.Repair');
+                13=ScriptItemActParam(1);
+            }
+            refartsupgrade2=if(ScriptItemActionType(t_OnStartAB))ExecuteCodeFromString(GenerateCodeStringFromBlock('Artefacts.RefArtsUpgrade.ABstartActCode'));
+            refartsupgrade3=if(ScriptItemActionType(t_OnItemEquip) || ScriptItemActionType(t_OnItemDeEquip))
+            refartsupgrade4 ^{
+                00=if(!FormCurShip())exit;
+                01=if(!ShipInHole(FormCurShip()))exit;
+                02=if(ScriptItemActionType(t_OnItemEquip))ExecuteCodeFromString(GenerateCodeStringFromBlock('Artefacts.RefArtsUpgrade.ABeqpActCode'));
+                03=if(ScriptItemActionType(t_OnItemDeEquip))ExecuteCodeFromString(GenerateCodeStringFromBlock('Artefacts.RefArtsUpgrade.ABdeeqpActCode'));
+            }
+        }
+        OnActCodeTypes=t_OnAnotherItem,t_OnStartAB,t_OnItemEquip,t_OnItemDeEquip
+    }
+    ArtSplinter ^{
+        Name=Навинт
+        OnActCode ^{
+            refartsupgrade0=if(ScriptItemActionType(t_OnAnotherItem))
+            refartsupgrade1 ^{
+                00=dword rau_curitem=CurItem(), rau_anthitem=ScriptItemActObject1();
+                01=if(ItemType(rau_anthitem)<t_Weapon1 || ItemType(rau_anthitem)>t_CustomWeapon)exit;
+                01=if(GetEquipmentStats(rau_anthitem,3)!=1)exit;
+                02=int rau_bon1=FindBonusByNameInCfg('RefArtsPlus_Navint');
+                03=if(ItemExtraSpecialsCountByType(rau_anthitem,rau_bon1))MessageBox(Format(CT('Artefacts.RefArtsUpgrade.ArtLimit'),'AnotherItemName',Name(rau_anthitem)));
+                03=if(ItemExtraSpecialsCountByType(rau_anthitem,rau_bon1))exit;
+                04=str text = 'Вы уверены, что хотите установить CurItemName в AnotherItemName?';
+                05=text=Format(text,'CurItemName',Name(rau_curitem),'AnotherItemName',Name(rau_anthitem));
+                06=if(!MessageBoxYesNo(text))exit;
+                11=ItemExtraSpecialsAddByType(rau_anthitem,rau_bon1);
+                12=Sound('Sound.Repair');
+                13=ScriptItemActParam(1);
+            }
+            refartsupgrade2=if(ScriptItemActionType(t_OnStartAB))ExecuteCodeFromString(GenerateCodeStringFromBlock('Artefacts.RefArtsUpgrade.ABstartActCode'));
+            refartsupgrade3=if(ScriptItemActionType(t_OnItemEquip) || ScriptItemActionType(t_OnItemDeEquip))
+            refartsupgrade4 ^{
+                00=if(!FormCurShip())exit;
+                01=if(!ShipInHole(FormCurShip()))exit;
+                02=if(ScriptItemActionType(t_OnItemEquip))ExecuteCodeFromString(GenerateCodeStringFromBlock('Artefacts.RefArtsUpgrade.ABeqpActCode'));
+                03=if(ScriptItemActionType(t_OnItemDeEquip))ExecuteCodeFromString(GenerateCodeStringFromBlock('Artefacts.RefArtsUpgrade.ABdeeqpActCode'));
+            }
+        }
+        OnActCodeTypes=t_OnAnotherItem,t_OnStartAB,t_OnItemEquip,t_OnItemDeEquip
+    }
+    ArtWeaponToSpeed ^{
+        OnActCode ^{
+            refartsupgrade2=if(ScriptItemActionType(t_OnStartAB))ExecuteCodeFromString(GenerateCodeStringFromBlock('Artefacts.RefArtsUpgrade.ABstartActCode'));
+            refartsupgrade3=if(ScriptItemActionType(t_OnItemEquip) || ScriptItemActionType(t_OnItemDeEquip))
+            refartsupgrade4 ^{
+                00=if(!FormCurShip())exit;
+                01=if(!ShipInHole(FormCurShip()))exit;
+                02=if(ScriptItemActionType(t_OnItemEquip))ExecuteCodeFromString(GenerateCodeStringFromBlock('Artefacts.RefArtsUpgrade.ABeqpActCode'));
+                03=if(ScriptItemActionType(t_OnItemDeEquip))ExecuteCodeFromString(GenerateCodeStringFromBlock('Artefacts.RefArtsUpgrade.ABdeeqpActCode'));
+            }
+        }
+        OnActCodeTypes=t_OnStartAB,t_OnItemEquip,t_OnItemDeEquip
+    }
+    RefArtsUpgrade ^{
+        ABModifiers ^{
+            damage ^{
+                Name=наносимый урон: var%<br>
+                t_ArtDecelerate=10
+                t_ArtDefToEnergy=10
+                t_ArtEnergyPulse=15
+                t_ArtGiperJump=4
+            }
+            fragility ^{
+                Name=защита: var%<br>
+                t_ArtDefToEnergy=20
+                t_ArtEnergyDef=-12
+                t_ArtGiperJump=4
+                t_ArtMissileDef=-10
+                t_ArtPDTurret=-15
+                t_ArtefactDef=-10
+                t_ArtefactHull=-15
+            }
+            gravity ^{
+                Name=гравитация: var%<br>
+                t_ArtGiperJump=4
+                t_ArtefactAntigrav=-35
+            }
+            luck ^{
+                Name=удача: var%<br>
+                t_ArtGiperJump=4
+                t_ArtefactMiniExpl=10
+            }
+            recharge ^{
+                Name=скорость перезарядки: var%<br>
+                t_ArtDefToEnergy=30
+                t_ArtGiperJump=4
+                t_ArtSplinter=15
+            }
+            regen ^{
+                Name=регенерация: var%<br>
+                t_ArtGiperJump=4
+                t_ArtefactNano=20
+            }
+            speed ^{
+                Name=скорость корабля: var%<br>
+                t_ArtForsage=7
+                t_ArtGiperJump=4
+                t_ArtWeaponToSpeed=20
+                t_ArtefactSpeed=40
+            }
+        }
+        ABdeeqpActCode ^{
+            00=dword art=CurItem(), ship=FormCurShip();
+            01=int j=0, k=0, l=0, m=0;
+            02=str str0='', str1='';
+            03=unknown arr0, arr1, bonus;
+            04=k=CT('Artefacts.RefArtsUpgrade.ABModifiers',arr0);
+            05=bonus=newarray(1);
+            06=for(j=0;j<k;j=j+1)
+            07 ^{
+                00=str0=GetVariableName(arr0[j]);
+                01=ArrayAdd(bonus,0,str0);
+                02=l=CT('Artefacts.RefArtsUpgrade.ABModifiers.'+GetVariableName(arr0[j]),arr1);
+                03=if(l==0)continue;
+                04=for(m=0;m<l;m=m+1)
+                05 ^{
+                    00=str1=GetVariableName(arr1[m]);
+                    01=if(findsubstr(str1,'t_Art')==-1)continue;
+                    02=if(GetValueFromScript('',str1)!=ItemType(art))continue;
+                    03=bonus[str0]=bonus[str0]+arr1[m];
+                }
+            }
+            08=str0='';
+            09=for(j=1;j<ArrayDim(bonus);j=j+1)
+            10 ^{
+                00=if(bonus[j]!=0)ABShipModifiers(ship,GetVariableName(arr0[j-1]),ABShipModifiers(ship,GetVariableName(arr0[j-1]))-bonus[j]);
+            }
+        }
+        ABeqpActCode ^{
+            00=dword art=CurItem(), ship=FormCurShip();
+            01=int j=0, k=0, l=0, m=0;
+            02=str str0='', str1='';
+            03=unknown arr0, arr1, bonus;
+            04=k=CT('Artefacts.RefArtsUpgrade.ABModifiers',arr0);
+            05=bonus=newarray(1);
+            06=for(j=0;j<k;j=j+1)
+            07 ^{
+                00=str0=GetVariableName(arr0[j]);
+                01=ArrayAdd(bonus,0,str0);
+                02=l=CT('Artefacts.RefArtsUpgrade.ABModifiers.'+GetVariableName(arr0[j]),arr1);
+                03=if(l==0)continue;
+                04=for(m=0;m<l;m=m+1)
+                05 ^{
+                    00=str1=GetVariableName(arr1[m]);
+                    01=if(findsubstr(str1,'t_Art')==-1)continue;
+                    02=if(GetValueFromScript('',str1)!=ItemType(art))continue;
+                    03=bonus[str0]=bonus[str0]+arr1[m];
+                }
+            }
+            08=str0='';
+            09=for(j=1;j<ArrayDim(bonus);j=j+1)
+            10 ^{
+                00=if(bonus[j]!=0)ABShipModifiers(ship,GetVariableName(arr0[j-1]),ABShipModifiers(ship,GetVariableName(arr0[j-1]))+bonus[j]);
+            }
+        }
+        ABstartActCode ^{
+            00=dword ship=ScriptItemActShip(), art=0;
+            01=int i=0, j=0, k=0, l=0, m=0, n=0, infos=ShipFindCustomShipInfoByType(ship,'RefArtsUpgrade_AB_Infos');
+            02=if(infos!=-1)exit;
+            03=str str0='', str1='';
+            04=unknown arr0, arr1, bonus;
+            05=ShipAddCustomShipInfo(ship,'RefArtsUpgrade_AB_Infos','NoShow');
+            06=infos=ShipFindCustomShipInfoByType(ship,'RefArtsUpgrade_AB_Infos');
+            07=bonus=newarray(1);
+            08=k=CT('Artefacts.RefArtsUpgrade.ABModifiers',arr0);
+            09=for(j=0;j<k;j=j+1)
+            10 ^{
+                00=str0=GetVariableName(arr0[j]);
+                01=ArrayAdd(bonus,0,str0);
+            }
+            11=for(i=1;i<5;i=i+1)
+            12 ^{
+                00=art=ShipEqInSlot(ship,t_Artefact,i);
+                01=if(!art)continue;
+                02=for(j=0;j<k;j=j+1)
+                03 ^{
+                    00=str0=GetVariableName(arr0[j]);
+                    01=if(1>2)ArrayAdd(bonus,0,str0);
+                    02=l=CT('Artefacts.RefArtsUpgrade.ABModifiers.'+GetVariableName(arr0[j]),arr1);
+                    03=if(l==0)continue;
+                    04=for(m=0;m<l;m=m+1)
+                    05 ^{
+                        00=str1=GetVariableName(arr1[m]);
+                        01=if(findsubstr(str1,'t_Art')==-1)continue;
+                        02=if(GetValueFromScript('',str1)!=ItemType(art))continue;
+                        03=bonus[str0]=bonus[str0]+arr1[m];
+                    }
+                }
+            }
+            13=str0='';
+            14=for(j=1;j<ArrayDim(bonus);j=j+1)
+            15 ^{
+                00=if(bonus[j]!=0)ABShipModifiers(ship,GetVariableName(arr0[j-1]),ABShipModifiers(ship,GetVariableName(arr0[j-1]))+bonus[j]);
+                01=str0=str0+Format(CT('Artefacts.RefArtsUpgrade.ABModifiers.'+GetVariableName(arr0[j-1])+'.Name'),'var',ABShipModifiers(ship,GetVariableName(arr0[j-1])));
+            }
+            16=ShipCustomShipInfoDescription(ship,infos,str0);
+        }
+        ArtBomb_Drop=Кварковая бомба успешно сдетонировала на поверхности корпуса!
+        ArtBomb_End=Коридор. Ещё коридор. Гермодверь. Пятизначный код. Машинное отделение. Защитный костюм. Реактор двигателя. Несколько пучков проводов и кабелей. Обложить стержни с топливом, потом - соединить с основной частью. Соединить кабеля панели управления с кабелями основной части. И подвести к детонатору. Кажется, всё готово. И будто вся Ваша жизнь промелькнула перед Вами... Центр рейнджеров 1-го января 3300 года... Борьба с доминаторами... Выполнение секретных правительственных поручений... Весь корабль несколько раз довольно сильно трухануло. Новый налёт, подумали вы. Налёт, который низведёт стабильность последних остатков того, что было корпусом, до нуля. Пора. Одно движение пальца, один простейший сигнал, и продукт высокой инженерной мысли разорвало на части, вместе со всеми атакующими кораблями... <br>Во имя Коалиции, да будет эта жертва принесена!
+        ArtLimit=Достигнут предел улучшения характеристик AnotherItemName!
+        ArtLimitOtmorozki=Две колонии на одном корпусе не уживутся!
+    }
+}
+MicroModuls ^{
+	RefArtsPlus_Reflector ^{
+        Equipments=Hull
+        ExText=<clr><clrEnd>
+        ExText=<color=248,252,248>Улучшение:</color> <clr>Рефлекторные системы<clrEnd>
+        ExText=<color=248,252,248>В системы корабля внедрены системы рефлекторных щитов.</color>
+        ExText=<clr><clrEnd>
+        ExText=Восприимчивость к урону энергетическими орудиями: <clr>-10<clrEnd>%
+        FragilityEnergy=90
+        LockedAcryn=3
+        NonSearchable=1
+        Priority=0
+        Special=1
+    }
+    RefArtsPlus_Biomir ^{
+        Equipments=Hull
+        ExText=<clr><clrEnd>
+        ExText=<color=248,252,248>Улучшение:</color> <clr>Биорегулятор<clrEnd>
+        ExText=<color=248,252,248>В салон корабля внедрены системы регуляции состава воздуха, что повышает стойкость организма.</color>
+        ExText=<clr><clrEnd>
+        ExText=Дополнительно стимуляторов: <clr>+1<clrEnd> ед.
+        LockedAcryn=3
+        NonSearchable=1
+        Priority=0
+        Special=1
+        bonStimCapacity=1
+    }
+    RefArtsPlus_Droid1 ^{
+        Equipments=Droid
+        ExText=<clr><clrEnd>
+        ExText=<color=248,252,248>Улучшение:</color> <clr>Дополнительный дрон<clrEnd>
+        ExText=<color=248,252,248>К дроиду присоединён дополнительный ремонтный дрон, за счёт чего повышается общая эффективность починки корабля.</color>
+        ExText=<clr><clrEnd>
+        ExText=Эффективность дроида: <clr>+4<clrEnd> ед.
+        LockedAcryn=3
+        NonSearchable=1
+        Priority=0
+        Special=1
+        bonDroid=4
+    }
+    RefArtsPlus_Droid2 ^{
+        Equipments=Droid
+        ExText=<clr><clrEnd>
+        ExText=<color=248,252,248>Улучшение:</color> <clr>Дополнительные дроны<clrEnd>
+        ExText=<color=248,252,248>К дроиду присоединены два дополнительных ремонтных дрона, за счёт чего повышается общая эффективность починки корабля.</color>
+        ExText=<clr><clrEnd>
+        ExText=Эффективность дроида: <clr>+8<clrEnd> ед.
+        LockedAcryn=3
+        NonSearchable=1
+        Priority=0
+        Special=1
+        bonDroid=8
+    }
+    RefArtsPlus_Droid3 ^{
+        Equipments=Droid
+        ExText=<clr><clrEnd>
+        ExText=<color=248,252,248>Улучшение:</color> <clr>Дополнительные дроны<clrEnd>
+        ExText=<color=248,252,248>К дроиду присоединены три дополнительных ремонтных дрона, за счёт чего повышается общая эффективность починки корабля.</color>
+        ExText=<clr><clrEnd>
+        ExText=Эффективность дроида: <clr>+12<clrEnd> ед.
+        LockedAcryn=3
+        NonSearchable=1
+        Priority=0
+        Special=1
+        bonDroid=12
+    }
+    RefArtsPlus_Hiper ^{
+        Equipments=Engine
+        ExText=<clr><clrEnd>
+        ExText=<color=248,252,248>Улучшение:</color> <clr>Усилитель гипергенерации<clrEnd>
+        ExText=<color=248,252,248>К гипергенератору двигателя подключены дополнительные усилители, что увеличивает дальность полёта между системами.</color>
+        ExText=<clr><clrEnd>
+        ExText=Дальность прыжка: <clr>+7<clrEnd> пк.
+        LockedAcryn=3
+        NonSearchable=1
+        Priority=0
+        Special=1
+        bonJump=7
+    }
+	RefArtsPlus_Hiper_hole ^{
+        Equipments=Engine
+        ExText=<clr><clrEnd>
+        ExText=<color=248,252,248>Улучшение:</color> <clr>Усилитель гипергенерации<clrEnd>
+        ExText=<color=248,252,248>К гипергенератору двигателя подключены дополнительные усилители, что увеличивает дальность полёта между системами.</color>
+        ExText=<clr><clrEnd>
+        ExText=Дальность прыжка: <clr>+10<clrEnd> пк.
+        LockedAcryn=3
+        NonSearchable=1
+        Priority=0
+        Special=1
+        bonJump=10
+    }
+    RefArtsPlus_Kwark ^{
+        Equipments=Hull
+        ExText=<clr><clrEnd>
+        ExText=<color=248,252,248>Система самоподрыва</color>
+        ExText=<color=248,252,248>К корпусу присоединены системы для подрыва прикреплённых взрывчатых средств. Подрыв автоматический. Отключение системы невозможно.</color>
+        ExText=<clr><clrEnd>
+        ExText=Время до взрыва: <clr>1<clrEnd> д.
+        LockedAcryn=3
+        NonSearchable=1
+        Priority=0
+        Special=1
+    }
+    RefArtsPlus_NANI ^{
+        Equipments=WEnergy,WSplinter,WMissile,Droid,DefGenerator,Engine,FuelTank,Scaner,Radar,Hook
+        ExText=<clr><clrEnd>
+        ExText=<color=248,252,248>Улучшение:</color> <clr>Нанитоидные восстановители<clrEnd>
+        ExText=<color=248,252,248>К оборудованию подключены нанитоидные восстановители, увеличивающие время эксплуатации оборудования.</color>
+        ExText=<clr><clrEnd>
+        ExText=Надёжность: <clr>+35<clrEnd>%
+        Fragility=77
+        LockedAcryn=3
+        NonSearchable=1
+        Priority=0
+        Special=1
+    }
+    RefArtsPlus_Navint ^{
+        Equipments=WSplinter
+        ExText=<clr><clrEnd>
+        ExText=<color=248,252,248>Улучшение:</color> <clr>Мини-завод<clrEnd>
+        ExText=<color=248,252,248>В орудие интегрирован мини-завод по усовершенствованию снарядов, которые наносят больший урон.</color>
+        ExText=<clr><clrEnd>
+        ExText=Сила осколочных орудий: <clr>+5<clrEnd> ед.
+        LockedAcryn=3
+        NonSearchable=1
+        Priority=0
+        Special=1
+        bonWSplinter=5
+    }
+    RefArtsPlus_Oblivion ^{
+        Equipments=Engine
+        ExText=<clr><clrEnd>
+        ExText=<color=248,252,248>Улучшение:</color> <clr>Коннектор<clrEnd>
+        ExText=<color=248,252,248>В двигатель добавлен коннектор, ослабляющий повреждение двигателя в процессе эксплуатации.</color>
+        ExText=<clr><clrEnd>
+        ExText=Надёжность: <clr>+15<clrEnd>%
+        Fragility=86
+        LockedAcryn=3
+        NonSearchable=1
+        Priority=0
+        Special=1
+    }
+    RefArtsPlus_Otmorozki ^{
+        Equipments=Hull
+        ExText=<clr><clrEnd>
+        ExText=<color=248,252,248>Улучшение:</color> <clr>Колония бактерий<clrEnd>
+        ExText=<color=248,252,248>В выемках корпуса поселилась колония сверххолодных бактериях, снижающих эффективность повреждений осколочными орудиями.</color>
+        ExText=<clr><clrEnd>
+        ExText=Восприимчивость к урону осколочными орудиями: <clr>-10<clrEnd>%
+        FragilitySplinter=90
+        LockedAcryn=3
+        NonSearchable=1
+        Priority=0
+        Special=1
+    }
+    RefArtsPlus_PRO1 ^{
+        Equipments=Hull
+        ExText=<clr><clrEnd>
+        ExText=<color=248,252,248>Улучшение:</color> <clr>Системы ПРО<clrEnd>
+        ExText=<color=248,252,248>Частей:</color> <clr>1<clrEnd> / <clr>3<clrEnd>.
+        LockedAcryn=3
+        NonSearchable=1
+        Priority=0
+        Special=1
+    }
+    RefArtsPlus_PRO2 ^{
+        Equipments=Hull
+        ExText=<clr><clrEnd>
+        ExText=<color=248,252,248>Улучшение:</color> <clr>Системы ПРО<clrEnd>
+        ExText=<color=248,252,248>Частей:</color> <clr>2<clrEnd> / <clr>3<clrEnd>.
+        LockedAcryn=3
+        NonSearchable=1
+        Priority=0
+        Special=1
+    }
+    RefArtsPlus_PRO3 ^{
+        Equipments=Hull
+        ExText=<clr><clrEnd>
+        ExText=<color=248,252,248>Улучшение:</color> <clr>Системы ПРО<clrEnd>
+        ExText=<color=248,252,248>К корпусу присоединена система противоракетной обороны.</color>
+        ExText=Восприимчивость к урону ракетными орудиями: <clr>+10<clrEnd>%
+        ExText=Восприимчивость к урону осколочными орудиями: <clr>+10<clrEnd>%
+        FragilityMissile=110
+        FragilitySplinter=110
+        LockedAcryn=3
+        NonSearchable=1
+        Priority=0
+        Special=1
+    }
+    RefArtsPlus_Proglot ^{
+        Equipments=Hull
+        ExText=<clr><clrEnd>
+        ExText=<color=248,252,248>Улучшение:</color> <clr>Поглотитель<clrEnd>
+        ExText=<color=248,252,248>В корпус интегрированы системы поглощения энергетических всплесков.</color>
+        ExText=<clr><clrEnd>
+        ExText=Восприимчивость к урону энергетическими орудиями: <clr>-15<clrEnd>%
+        FragilityEnergy=87
+        LockedAcryn=3
+        NonSearchable=1
+        Priority=0
+        Special=1
+    }
+    RefArtsPlus_Psi ^{
+        Equipments=Engine
+        ExText=<clr><clrEnd>
+        ExText=<color=248,252,248>Улучшение:</color> <clr>Пси-ускоритель<clrEnd>
+        ExText=<color=248,252,248>В двигатель интегрирован пси-ускоритель, что повышает эффективность его работы.</color>
+        ExText=<clr><clrEnd>
+        ExText=Скорость двигателя: <clr>+150<clrEnd> ед.
+        LockedAcryn=3
+        NonSearchable=1
+        Priority=0
+        Special=1
+        bonSpeed=150
+    }
+    RefArtsPlus_Pyaterik ^{
+        Equipments=WEnergy
+        ExText=<clr><clrEnd>
+        ExText=<color=248,252,248>Улучшение:</color> <clr>Дополнительный накопитель<clrEnd>
+        ExText=<color=248,252,248>К орудию присоединена система накопления излишков энергии, перенаправляющая эти самые излишки на стволы, чем и повышая эффективность стрельбы из орудий.</color>
+        ExText=<clr><clrEnd>
+        ExText=Сила энергетических орудий: <clr>+6<clrEnd> ед.
+        LockedAcryn=3
+        NonSearchable=1
+        Priority=0
+        Special=1
+        bonWEnergy=6
+    }
+    RefArtsPlus_Racetang ^{
+        Equipments=Hull
+        ExText=<clr><clrEnd>
+        ExText=<color=248,252,248>Улучшение:</color> <clr>Амортизатор<clrEnd>
+        ExText=<color=248,252,248>В корпус интегрированы системы амортизации импульса от взрыва самонаводящихся снарядов.</color>
+        ExText=<clr><clrEnd>
+        ExText=Восприимчивость к урону ракетными орудиями: <clr>-10<clrEnd>%
+        FragilityMissile=90
+        LockedAcryn=3
+        NonSearchable=1
+        Priority=0
+        Special=1
+    }
+    RefArtsPlus_Radar1 ^{
+        Equipments=Radar
+        ExText=<clr><clrEnd>
+        ExText=<color=248,252,248>Улучшение:</color> <clr>Дополнительный усилитель<clrEnd>
+        ExText=<color=248,252,248>В радар вставлены дополнительные радиолокационные системы для повышения его мощности.</color>
+        ExText=<clr><clrEnd>
+        ExText=Дальность радара: <clr>+350<clrEnd> ед.
+        LockedAcryn=3
+        NonSearchable=1
+        Priority=0
+        Special=1
+        bonRadar=350
+    }
+    RefArtsPlus_Radar2 ^{
+        Equipments=Radar
+        ExText=<clr><clrEnd>
+        ExText=<color=248,252,248>Улучшение:</color> <clr>Два дополнительных усилителя<clrEnd>
+        ExText=<color=248,252,248>В радар вставлены две дополнительные радиолокационные системы для повышения его мощности.</color>
+        ExText=<clr><clrEnd>
+        ExText=Дальность радара: <clr>+700<clrEnd> ед.
+        LockedAcryn=3
+        NonSearchable=1
+        Priority=0
+        Special=1
+        bonRadar=700
+    }
+    RefArtsPlus_Radar3 ^{
+        Equipments=Radar
+        ExText=<clr><clrEnd>
+        ExText=<color=248,252,248>Улучшение:</color> <clr>Три дополнительных усилителя<clrEnd>
+        ExText=<color=248,252,248>В радар вставлены три дополнительные радиолокационные системы для повышения его мощности.</color>
+        ExText=<clr><clrEnd>
+        ExText=Дальность радара: <clr>+1050<clrEnd> ед.
+        LockedAcryn=3
+        NonSearchable=1
+        Priority=0
+        Special=1
+        bonRadar=1050
+    }
+    RefArtsPlus_Rals ^{
+        Equipments=WMissile
+        ExText=<clr><clrEnd>
+        ExText=<color=248,252,248>Улучшение:</color> <clr>Дополнительный заряжатель<clrEnd>
+        ExText=<color=248,252,248>В орудие вставлен дополнительный заряжатель, повышающий скорость стрельбы.</color>
+        ExText=<color=248,252,248>Увы, ускоренная перезарядка приводит к снижению времени работы систем наведения, что, в свою очередь, снижает поражающую способность снарядов.</color>
+        ExText=<clr><clrEnd>
+        ExText=Скорострельность: + <clr>1<clrEnd>
+        ExText=Сила ракетного оружия: <clr>-17<clrEnd> ед.
+        LockedAcryn=3
+        NonSearchable=1
+        Priority=0
+        Special=1
+        bonAttacks=1
+        bonWMissile=-17
+    }
+    RefArtsPlus_Scaner1 ^{
+        Equipments=Scaner
+        ExText=<clr><clrEnd>
+        ExText=<color=248,252,248>Улучшение:</color> <clr>Дополнительный кэш<clrEnd>
+        ExText=<color=248,252,248>К сканеру подключён дополнительный кэш, что повышает его возможности к сканированию объектов.</color>
+        ExText=<clr><clrEnd>
+        ExText=Мощность сканера: <clr>+3<clrEnd>%
+        LockedAcryn=3
+        NonSearchable=1
+        Priority=0
+        Special=1
+        bonScan=3
+    }
+    RefArtsPlus_Scaner2 ^{
+        Equipments=Scaner
+        ExText=<clr><clrEnd>
+        ExText=<color=248,252,248>Улучшение:</color> <clr>Пара кэшей<clrEnd>
+        ExText=<color=248,252,248>К сканеру подсоединено два дополнительных кэша, что повышает его возможности к сканированию объектов.</color>
+        ExText=<clr><clrEnd>
+        ExText=Мощность сканера: <clr>+6<clrEnd>%
+        LockedAcryn=3
+        NonSearchable=1
+        Priority=0
+        Special=1
+        bonScan=6
+    }
+    RefArtsPlus_Scaner3 ^{
+        Equipments=Scaner
+        ExText=<clr><clrEnd>
+        ExText=<color=248,252,248>Улучшение:</color> <clr>Набор кэшей<clrEnd>
+        ExText=<color=248,252,248>К сканеру подсоединено несколько дополнительных кэшей, что повышает его возможности к сканированию объектов.</color>
+        ExText=<clr><clrEnd>
+        ExText=Мощность сканера: <clr>+9<clrEnd>%
+        LockedAcryn=3
+        NonSearchable=1
+        Priority=0
+        Special=1
+        bonScan=9
+    }
+    RefArtsPlus_Shield1 ^{
+        Equipments=DefGenerator
+        ExText=<clr><clrEnd>
+        ExText=<color=248,252,248>Улучшение:</color> <clr>Дополнительный генератор<clrEnd>
+        ExText=<color=248,252,248>К генератору защитного поля подключён дополнительный малый генератор, повышающий мощность основного поля.</color>
+        ExText=<clr><clrEnd>
+        ExText=Генератор поля: <clr>+2<clrEnd>%
+        LockedAcryn=3
+        NonSearchable=1
+        Priority=0
+        Special=1
+        bonDef=2
+    }
+    RefArtsPlus_Shield2 ^{
+        Equipments=DefGenerator
+        ExText=<clr><clrEnd>
+        ExText=<color=248,252,248>Улучшение:</color> <clr>Дополнительные генераторы<clrEnd>
+        ExText=<color=248,252,248>К генератору защитного поля подключён два дополнительных малых генератора, повышающих мощность основного поля.</color>
+        ExText=<clr><clrEnd>
+        ExText=Генератор поля: <clr>+4<clrEnd>%
+        LockedAcryn=3
+        NonSearchable=1
+        Priority=0
+        Special=1
+        bonDef=4
+    }
+    RefArtsPlus_Shield3 ^{
+        Equipments=DefGenerator
+        ExText=<clr><clrEnd>
+        ExText=<color=248,252,248>Улучшение:</color> <clr>Дополнительные генераторы<clrEnd>
+        ExText=<color=248,252,248>К генератору защитного поля подключён три дополнительных малых генератора, повышающих мощность основного поля.</color>
+        ExText=<clr><clrEnd>
+        ExText=Генератор поля: <clr>+6<clrEnd>%
+        LockedAcryn=3
+        NonSearchable=1
+        Priority=0
+        Special=1
+        bonDef=6
+    }
+}
+ShipInfo ^{
+    AddInfo ^{
+        CustomInfos ^{
+            RefArtsUpgrade_AB_Infos ^{
+                Description=Бонусы в ЧД
+                Icon=0
+                Name=Бонусы в ЧД
+                OnActCode ^{
+                    00=if(ScriptItemActionType(t_OnStep, 11))ShipDeleteCustomShipInfo(ScriptItemActShip(),CurInfo());
+                    01=else
+                    02 ^{
+                        00=dword ship=ScriptItemActShip();
+                        01=int i=0, j=0,  infos=ShipFindCustomShipInfoByType(ship,'RefArtsUpgrade_AB_Infos');
+                        02=str str0='';
+                        03=unknown arr0;
+                        04=j=CT('Artefacts.RefArtsUpgrade.ABModifiers',arr0);
+                        05=for(i=0;i<j;i=i+1)str0=str0+Format(CT('Artefacts.RefArtsUpgrade.ABModifiers.'+GetVariableName(arr0[i])+'.Name'),'var',ABShipModifiers(ship,GetVariableName(arr0[i])));
+                        06=ShipCustomShipInfoDescription(ship,infos,str0);
+                    }
+                }
+                OnActCodeTypes=t_OnEnteringForm,t_OnReEnteringForm
+                OnActStepTypes=11
+            }
+            RefArtsUpgrade_ArtBomb_Infos ^{
+                Description=qarka
+                Icon=0
+                Name=--
+                OnActCode ^{
+					00=dword item=CreateArt(t_ArtefactBomb,0), ship=ScriptItemActShip();
+					01=DropItemInSystem(ShipStar(ship),item,CoordX(ship),CoordY(ship),CoordX(ship),CoordY(ship));
+					02=StopMovingItem(ShipStar(ship),item);
+					03=FireWeapon(ship,item,0);
+					04=Ether(8,'q_bomb_drop',CT('Artefacts.RefArtsUpgrade.ArtBomb_Drop'));
+					05=ItemExtraSpecialsDeleteByType(ShipEqInSlot(ship, t_Hull), FindBonusByNameInCfg('RefArtsPlus_Kwark'));
+					06=ShipDeleteCustomShipInfo(ship,CurInfo());
+                }
+                OnActStepTypes=5
+            }
+        }
+    }
+}
