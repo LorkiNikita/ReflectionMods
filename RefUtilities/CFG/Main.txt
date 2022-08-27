@@ -1,0 +1,9 @@
+Data ^{
+    ScriptLibs ^{
+        RefUtilities ^{
+            Path=Mods\Reflection\RefUtilities\DATA\RefUtilities.dll
+			TimeGetTimeStamp=int,TimeGetTimeStamp
+			
+        }
+    }
+}

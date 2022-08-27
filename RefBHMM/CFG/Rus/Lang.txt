@@ -1,0 +1,445 @@
+MicroModuls ^{
+    RefMM_Bh1 ^{
+        Color=0,0,139
+        Equipments=FuelTank
+        KindGraph=RefBh
+        Name=Объект №25
+        Owner=None,NonKling
+        Priority=90
+        RacialRestriction=1
+        Text=Микромодуль третьего уровня. Плод научной мысли неизвестных рас. Принципы работы и название микромодуля у их создателей учёными так и не были установлены. Единственное, что удалось понять - влияние микромодуля на оборудование. Совмещается только с оборудованием <clr>неизвестных рас<clrEnd>.
+        Text=Объем бака: <bonFuel> ед.
+        bonFuel=7
+    }
+    RefMM_Bh10 ^{
+        Color=0,0,139
+        Equipments=WEnergy,WSplinter,WMissile
+        KindGraph=RefBh
+        Name=Объект №253
+        Owner=None,NonKling
+        Priority=90
+        RacialRestriction=1
+        Text=Микромодуль третьего уровня. Плод научной мысли неизвестных рас. Принципы работы и название микромодуля у их создателей учёными так и не были установлены. Единственное, что удалось понять - влияние микромодуля на оборудование. Совмещается только с оборудованием <clr>неизвестных рас<clrEnd>.
+        Text=Сила любого оружия: <clr>+7<clrEnd> ед.
+        Text=Дальность стрельбы: <bonWRadius> ед.
+        bonWEnergy=7
+        bonWMissile=7
+        bonWRadius=40
+        bonWSplinter=7
+    }
+    RefMM_Bh11 ^{
+        Color=0,0,139
+        Equipments=Engine
+        Fragility=120
+        KindGraph=RefBh
+        Name=Объект №271
+        Owner=None,NonKling
+        Priority=45
+        RacialRestriction=1
+        Text=Микромодуль второго уровня. Плод научной мысли неизвестных рас. Принципы работы и название микромодуля у их создателей учёными так и не были установлены. Единственное, что удалось понять - влияние микромодуля на оборудование. Совмещается только с оборудованием <clr>неизвестных рас<clrEnd>.
+        Text=Надежность: <clr>-20%<clrEnd>
+        Text=Скорость двигателя: <bonSpeed> ед.
+        bonSpeed=210
+    }
+    RefMM_Bh12 ^{
+        Color=0,0,139
+        Equipments=Engine
+        Fragility=110
+        KindGraph=RefBh
+        Name=Объект №283
+        Owner=None,NonKling
+        Priority=5
+        RacialRestriction=1
+        Text=Микромодуль второго уровня. Плод научной мысли неизвестных рас. Принципы работы и название микромодуля у их создателей учёными так и не были установлены. Единственное, что удалось понять - влияние микромодуля на оборудование. Совмещается только с оборудованием <clr>неизвестных рас<clrEnd>.
+        Text=Надежность: <clr>-10%<clrEnd>
+        Text=Дальность прыжка: <bonJump> ед.
+        Text=Скорость двигателя: <bonSpeed> ед.
+        bonJump=10
+        bonSpeed=-85
+    }
+    RefMM_Bh13 ^{
+        Color=0,0,139
+        Equipments=Hook
+        Fragility=95
+        KindGraph=RefBh
+        Name=Объект №301
+        Owner=None,NonKling
+        Priority=5
+        RacialRestriction=1
+        Text=Микромодуль второго уровня. Плод научной мысли неизвестных рас. Принципы работы и название микромодуля у их создателей учёными так и не были установлены. Единственное, что удалось понять - влияние микромодуля на оборудование. Совмещается только с оборудованием <clr>неизвестных рас<clrEnd>.
+        Text=Надежность: <clr>-5%<clrEnd>
+        Text=Мощность захвата: <bonHook> ед.
+        Text=Дальность захвата: <bonHookRadius> ед.
+        Text=Скорость притягивания на дальней дистанции: <bonHookMaxSpeed> ед.
+        Text=Скорость притягивания на ближней дистанции: <bonHookMinSpeed> ед.
+        bonHook=-30
+        bonHookMaxSpeed=2
+        bonHookMinSpeed=4
+        bonHookRadius=-50
+    }
+    RefMM_Bh14 ^{
+        Color=0,0,139
+        Equipments=Hull
+        FragilityEnergy=115
+        FragilityMissile=115
+        FragilitySplinter=115
+        KindGraph=RefBh
+        Name=Объект №329
+        Owner=None,NonKling
+        Priority=45
+        RacialRestriction=1
+        Size=130
+        Text=Микромодуль второго уровня. Плод научной мысли неизвестных рас. Принципы работы и название микромодуля у их создателей учёными так и не были установлены. Единственное, что удалось понять - влияние микромодуля на оборудование. Совмещается только с оборудованием <clr>неизвестных рас<clrEnd>.
+        Text=Размер: <clr>+30%<clrEnd>
+        Text=Увеличивает восприимчивость корпуса на <clr>15<clrEnd>%
+    }
+    RefMM_Bh15 ^{
+        Color=0,0,139
+        Equipments=WEnergy,WSplinter,WMissile,Droid,DefGenerator,Engine,FuelTank,Scaner,Radar,Hook,Hull
+        KindGraph=RefBh
+        Name=Объект №341
+        Owner=None,NonKling
+        Priority=45
+        RacialRestriction=1
+        Text=Микромодуль второго уровня. Плод научной мысли неизвестных рас. Принципы работы и название микромодуля у их создателей учёными так и не были установлены. Единственное, что удалось понять - влияние микромодуля на оборудование. Совмещается только с оборудованием <clr>неизвестных рас<clrEnd>.
+        Text=Увеличивает бонусы акрина на <clr>25<clrEnd>%
+        bonExtraAkrinEff=25
+    }
+    RefMM_Bh16 ^{
+        Color=0,0,139
+        Equipments=Hull
+        KindGraph=RefBh
+        Name=Объект №357
+        Owner=None,NonKling
+        Priority=45
+        RacialRestriction=1
+        Text=Микромодуль третьего уровня. Плод научной мысли неизвестных рас. Принципы работы и название микромодуля у их создателей учёными так и не были установлены. Единственное, что удалось понять - влияние микромодуля на оборудование. Совмещается только с оборудованием <clr>неизвестных рас<clrEnd>.
+        Text=Масса корабля: <bonMass>%.
+        Text=Броня корпуса: <bonHull> ед.
+        bonHull=-5
+        bonMass=-10
+    }
+    RefMM_Bh17 ^{
+        Color=0,0,139
+        Equipments=WMissile
+        KindGraph=RefBh
+        Name=Объект №381
+        Owner=None,NonKling
+        Priority=45
+        RacialRestriction=1
+        Text=Микромодуль второго уровня. Плод научной мысли неизвестных рас. Принципы работы и название микромодуля у их создателей учёными так и не были установлены. Единственное, что удалось понять - влияние микромодуля на оборудование. Совмещается только с оборудованием <clr>неизвестных рас<clrEnd>.
+        Text=Сила ракетного оружия: <bonWMissile> ед.
+        Text=Количество боезапаса для ракетного вооружения: <bonAmmo> шт.
+        Text=Скорость ракет и торпед: <bonMissileSpeed> ед.
+        bonAmmo=3
+        bonMissileSpeed=75
+        bonWMissile=5
+    }
+    RefMM_Bh18 ^{
+        Color=0,0,139
+        Equipments=WEnergy
+        Fragility=110
+        KindGraph=RefBHh
+        Name=Объект №392
+        Owner=None,NonKling
+        Priority=45
+        RacialRestriction=1
+        Text=Микромодуль второго уровня. Плод научной мысли неизвестных рас. Принципы работы и название микромодуля у их создателей учёными так и не были установлены. Единственное, что удалось понять - влияние микромодуля на оборудование. Совмещается только с оборудованием <clr>неизвестных рас<clrEnd>.
+        Text=Надежность: <clr>-10%<clrEnd>
+        Text=Сила энергетического оружия: <bonWEnergy> ед.
+        Text=Дальность стрельбы: <bonWRadius> ед.
+        bonWEnergy=7
+        bonWRadius=45
+    }
+    RefMM_Bh19 ^{
+        Color=0,0,139
+        Equipments=WSplinter,WEnergy
+        KindGraph=RefBh
+        Name=Объект №402
+        Owner=None,NonKling
+        Priority=45
+        RacialRestriction=1
+        Text=Микромодуль второго уровня. Плод научной мысли неизвестных рас. Принципы работы и название микромодуля у их создателей учёными так и не были установлены. Единственное, что удалось понять - влияние микромодуля на оборудование. Совмещается только с оборудованием <clr>неизвестных рас<clrEnd>.
+        Text=Скорострельность: +<clr>1<clrEnd>
+        Text=Сила энергетического оружия: <bonWEnergy> ед.
+        Text=Сила осколочного оружия: <bonWSplinter> ед.
+        bonAttacks=1
+        bonWEnergy=-23
+        bonWSplinter=-23
+    }
+    RefMM_Bh2 ^{
+        Color=0,0,139
+        Equipments=Engine
+        KindGraph=RefBh
+        Name=Объект №94
+        Owner=None,NonKling
+        Priority=90
+        RacialRestriction=1
+        Text=Микромодуль третьего уровня. Плод научной мысли неизвестных рас. Принципы работы и название микромодуля у их создателей учёными так и не были установлены. Единственное, что удалось понять - влияние микромодуля на оборудование. Совмещается только с оборудованием <clr>неизвестных рас<clrEnd>.
+        Text=Скорость двигателя: <bonSpeed> ед.
+        bonSpeed=120
+    }
+    RefMM_Bh20 ^{
+        Color=0,0,139
+        Equipments=WSplinter
+        KindGraph=RefBh
+        Name=Объект №423
+        Owner=None,NonKling
+        Priority=45
+        RacialRestriction=1
+        Text=Микромодуль второго уровня. Плод научной мысли неизвестных рас. Принципы работы и название микромодуля у их создателей учёными так и не были установлены. Единственное, что удалось понять - влияние микромодуля на оборудование. Совмещается только с оборудованием <clr>неизвестных рас<clrEnd>.
+        Text=Сила энергетического оружия: <bonWEnergy> ед.
+        Text=Дальность стрельбы: <bonWRadius> ед.
+        bonWRadius=45
+        bonWSplinter=5
+    }
+    RefMM_Bh21 ^{
+        Color=0,0,139
+        Equipments=Scaner
+        Fragility=120
+        KindGraph=RefBh
+        Name=Объект №442
+        Owner=None,NonKling
+        Priority=10
+        RacialRestriction=1
+        Text=Микромодуль первого уровня. Плод научной мысли неизвестных рас. Принципы работы и название микромодуля у их создателей учёными так и не были установлены. Единственное, что удалось понять - влияние микромодуля на оборудование. Совмещается только с оборудованием <clr>неизвестных рас<clrEnd>.
+        Text=Надежность: <clr>-20%<clrEnd>
+        Text=Мощность сканера: <bonScan> ед.
+        bonScan=13
+    }
+    RefMM_Bh22 ^{
+        Color=0,0,139
+        Equipments=DefGenerator
+        KindGraph=RefBh
+        Name=Объект №461
+        Owner=None,NonKling
+        Priority=10
+        RacialRestriction=1
+        Size=140
+        Text=Микромодуль первого уровня. Плод научной мысли неизвестных рас. Принципы работы и название микромодуля у их создателей учёными так и не были установлены. Единственное, что удалось понять - влияние микромодуля на оборудование. Совмещается только с оборудованием <clr>неизвестных рас<clrEnd>.
+        Text=Генератор поля: <bonDef> ед.
+        Text=Размер: <clr>+40%<clrEnd>
+        bonDef=10
+    }
+    RefMM_Bh23 ^{
+        Color=0,0,139
+        Equipments=Hull
+        KindGraph=RefBh
+        Name=Объект №472
+        Owner=None,NonKling
+        Priority=10
+        RacialRestriction=1
+        Text=Микромодуль первого уровня. Плод научной мысли неизвестных рас. Принципы работы и название микромодуля у их создателей учёными так и не были установлены. Единственное, что удалось понять - влияние микромодуля на оборудование. Совмещается только с оборудованием <clr>неизвестных рас<clrEnd>.
+        Text=Снижает <clr>восприимчивость к попаданиям астероидов<clrEnd> в корпус на <clr>45<clrEnd>%
+        bonResistAsteroid=45
+    }
+    RefMM_Bh24 ^{
+        Color=0,0,139
+        Equipments=Hull
+        KindGraph=RefBh
+        Name=Объект №495
+        Owner=None,NonKling
+        Priority=10
+        RacialRestriction=1
+        Text=Микромодуль первого уровня. Плод научной мысли неизвестных рас. Принципы работы и название микромодуля у их создателей учёными так и не были установлены. Единственное, что удалось понять - влияние микромодуля на оборудование. Совмещается только с оборудованием <clr>неизвестных рас<clrEnd>.
+        Text=Открывает слоты для<clr>двух орудий, двух артефактов, генератора защитного поля и дроида<clrEnd>
+        bonSlotArt=2
+        bonSlotDef=1
+        bonSlotDroid=1
+        bonSlotWeapon=2
+    }
+    RefMM_Bh25 ^{
+        Color=0,0,139
+        Equipments=Hull
+        KindGraph=RefBh
+        Name=Объект №491
+        Owner=None,NonKling
+        Priority=10
+        RacialRestriction=1
+        Text=Микромодуль первого уровня. Плод научной мысли неизвестных рас. Принципы работы и название микромодуля у их создателей учёными так и не были установлены. Единственное, что удалось понять - влияние микромодуля на оборудование. Совмещается только с оборудованием <clr>неизвестных рас<clrEnd>.
+        Text=Уменьшает дебаффы от акрина на <clr>40<clrEnd>%
+        Text=Увеличивает баффы от акрина на <clr>10<clrEnd>%
+        bonExtraAkrinEff=10
+        bonExtraAkrinPenalty=-40
+    }
+    RefMM_Bh26 ^{
+        Color=0,0,139
+        Equipments=FuelTank,WMissile
+        KindGraph=RefBh
+        Name=Объект №512
+        Owner=None,NonKling
+        Priority=10
+        RacialRestriction=1
+        Text=Микромодуль первого уровня. Плод научной мысли неизвестных рас. Принципы работы и название микромодуля у их создателей учёными так и не были установлены. Единственное, что удалось понять - влияние микромодуля на оборудование. Совмещается только с оборудованием <clr>неизвестных рас<clrEnd>.
+        Text=Объем бака: <bonFuel> ед.
+        Text=Скорость ракет и торпед: <clr>+300<clrEnd> ед.
+        bonFuel=12
+        bonMissileSpeed=150
+    }
+    RefMM_Bh27 ^{
+        Color=0,0,139
+        Equipments=WEnergy,WSplinter,Scaner
+        KindGraph=RefBh
+        Name=Объект №534
+        Owner=None,NonKling
+        Priority=90
+        RacialRestriction=1
+        Text=Микромодуль первого уровня. Плод научной мысли неизвестных рас. Принципы работы и название микромодуля у их создателей учёными так и не были установлены. Единственное, что удалось понять - влияние микромодуля на оборудование. Совмещается только с оборудованием <clr>неизвестных рас<clrEnd>.
+        Text=Дальность радара: <bonRadar> ед.
+        Text=Дальность стрельбы: <bonWRadius> ед.
+        bonRadar=950
+        bonWRadius=85
+    }
+    RefMM_Bh28 ^{
+        Color=0,0,139
+        Equipments=WMissile,Scaner
+        KindGraph=RefBh
+        Name=Объект №564
+        Owner=None,NonKling
+        Priority=10
+        RacialRestriction=1
+        Text=Микромодуль первого уровня. Плод научной мысли неизвестных рас. Принципы работы и название микромодуля у их создателей учёными так и не были установлены. Единственное, что удалось понять - влияние микромодуля на оборудование. Совмещается только с оборудованием <clr>неизвестных рас<clrEnd>.
+        Text=Сила ракетного оружия: <bonWMissile> ед.
+        Text=Мощность сканера: <bonScan> ед.
+        bonScan=11
+        bonWMissile=11
+    }
+    RefMM_Bh29 ^{
+        Color=0,0,139
+        Cost=100
+        Equipments=WMissile
+        Fragility=100
+        KindGraph=RefBh
+        Name=Объект №582
+        Owner=None,NonKling
+        Priority=10
+        RacialRestriction=1
+        Size=130
+        Text=Микромодуль первого уровня. Плод научной мысли неизвестных рас. Принципы работы и название микромодуля у их создателей учёными так и не были установлены. Единственное, что удалось понять - влияние микромодуля на оборудование. Совмещается только с оборудованием <clr>неизвестных рас<clrEnd>.
+        Text=Количество боезапаса для ракетного вооружения: <clr>+25<clrEnd> шт.
+        Text=Сила ракетного оружия: <bonWMissile> ед.
+        bonAmmo=25
+        bonWMissile=-10
+    }
+    RefMM_Bh3 ^{
+        Color=0,0,139
+        Equipments=Engine
+        KindGraph=RefBh
+        Name=Объект №114
+        Owner=None,NonKling
+        Priority=90
+        RacialRestriction=1
+        Text=Микромодуль третьего уровня. Плод научной мысли неизвестных рас. Принципы работы и название микромодуля у их создателей учёными так и не были установлены. Единственное, что удалось понять - влияние микромодуля на оборудование. Совмещается только с оборудованием <clr>неизвестных рас<clrEnd>.
+        Text=Дальность прыжка: <bonJump> ед.
+        bonJump=7
+    }
+    RefMM_Bh30 ^{
+        Color=0,0,139
+        Equipments=WEnergy,WSplinter,WMissile,Droid,DefGenerator,Engine,FuelTank,Scaner,Radar,Hook
+        KindGraph=RefBh
+        Name=Объект №609
+        Owner=None,NonKling
+        Priority=1
+        RacialRestriction=1
+        Text=Микромодуль первого уровня. Плод научной мысли неизвестных рас. Принципы работы и название микромодуля у их создателей учёными так и не были установлены. Единственное, что удалось понять - влияние микромодуля на оборудование. Совмещается только с оборудованием <clr>неизвестных рас<clrEnd>.
+        Text=Сила ракетного оружия: <bonWMissile> ед.
+        Text=Сила энергетического оружия: <bonWEnergy> ед.
+        Text=Сила осколочного оружия: <bonWSplinter> ед.
+        Text=Дальность радара: <bonRadar> ед.
+        Text=Мощность сканера: <bonScan> ед.
+        Text=Дальность прыжка: <bonJump> ед.
+        Text=Скорость двигателя: <bonSpeed> ед.
+        Text=Объем бака: <bonFuel> ед.
+        Text=Генератор поля: <bonDef> ед.
+        Text=Мощность захвата: <bonHook> ед.
+        Text=Дальность захвата: <bonHookRadius> ед.
+        bonDef=8
+        bonDroid=9
+        bonFuel=9
+        bonHook=30
+        bonHookRadius=50
+        bonJump=9
+        bonRadar=1000
+        bonScan=7
+        bonSpeed=175
+        bonWEnergy=15
+        bonWMissile=21
+        bonWSplinter=21
+    }
+    RefMM_Bh4 ^{
+        Color=0,0,139
+        Cost=100
+        Equipments=DefGenerator
+        Fragility=100
+        KindGraph=RefBh
+        Name=Объект №131
+        Owner=None,NonKling
+        Priority=90
+        RacialRestriction=1
+        Text=Микромодуль третьего уровня. Плод научной мысли неизвестных рас. Принципы работы и название микромодуля у их создателей учёными так и не были установлены. Единственное, что удалось понять - влияние микромодуля на оборудование. Совмещается только с оборудованием <clr>неизвестных рас<clrEnd>.
+        Text=Генератор поля: <bonDef> ед.
+        bonDef=5
+    }
+    RefMM_Bh5 ^{
+        Color=0,0,139
+        Equipments=Scaner
+        KindGraph=RefBh
+        Name=Объект №163
+        Owner=None,NonKling
+        Priority=90
+        RacialRestriction=1
+        Text=Микромодуль третьего уровня. Плод научной мысли неизвестных рас. Принципы работы и название микромодуля у их создателей учёными так и не были установлены. Единственное, что удалось понять - влияние микромодуля на оборудование. Совмещается только с оборудованием <clr>неизвестных рас<clrEnd>.
+        Text=Мощность сканера: <bonScan> ед.
+        bonScan=6
+    }
+    RefMM_Bh6 ^{
+        Color=0,0,139
+        Equipments=Radar
+        KindGraph=RefBh
+        Name=Объект №182
+        Owner=None,NonKling
+        Priority=90
+        RacialRestriction=1
+        Text=Микромодуль третьего уровня. Плод научной мысли неизвестных рас. Принципы работы и название микромодуля у их создателей учёными так и не были установлены. Единственное, что удалось понять - влияние микромодуля на оборудование. Совмещается только с оборудованием <clr>неизвестных рас<clrEnd>.
+        Text=Дальность радара: <bonRadar> ед.
+        bonRadar=650
+    }
+    RefMM_Bh7 ^{
+        Color=0,0,139
+        Equipments=Hook
+        KindGraph=RefBh
+        Name=Объект №211
+        Owner=None,NonKling
+        Priority=90
+        RacialRestriction=1
+        Text=Микромодуль третьего уровня. Плод научной мысли неизвестных рас. Принципы работы и название микромодуля у их создателей учёными так и не были установлены. Единственное, что удалось понять - влияние микромодуля на оборудование. Совмещается только с оборудованием <clr>неизвестных рас<clrEnd>.
+        Text=Мощность захвата: <bonHook> ед.
+        Text=Дальность захвата: <bonHookRadius> ед.
+        bonHook=35
+        bonHookRadius=60
+    }
+    RefMM_Bh8 ^{
+        Color=0,0,139
+        Equipments=Hull
+        KindGraph=RefBh
+        Name=Объект №227
+        Owner=None,NonKling
+        Priority=90
+        RacialRestriction=1
+        Text=Микромодуль третьего уровня. Плод научной мысли неизвестных рас. Принципы работы и название микромодуля у их создателей учёными так и не были установлены. Единственное, что удалось понять - влияние микромодуля на оборудование. Совмещается только с оборудованием <clr>неизвестных рас<clrEnd>.
+        Text=Броня корпуса: <bonHull> ед.
+        bonHull=4
+    }
+    RefMM_Bh9 ^{
+        Color=0,0,139
+        Equipments=Droid
+        KindGraph=RefBh
+        Name=Объект №239
+        Owner=None,NonKling
+        Priority=90
+        RacialRestriction=1
+        Text=Микромодуль третьего уровня. Плод научной мысли неизвестных рас. Принципы работы и название микромодуля у их создателей учёными так и не были установлены. Единственное, что удалось понять - влияние микромодуля на оборудование. Совмещается только с оборудованием <clr>неизвестных рас<clrEnd>.
+        Text=Эффективность дроида: <bonDroid> ед.
+        bonDroid=9
+    }
+}
