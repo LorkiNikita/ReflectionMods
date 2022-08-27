@@ -1,0 +1,40 @@
+Script ^{
+    RefSpAgentDefence=Mods\Reflection\RefSpAgentDefence\DATA\Script\RefSpAgentDefence.scr
+}
+Bm ^{
+	Items ^{
+		2Hull_Diversant_a=Mods\Reflection\RefSpAgentDefence\DATA\Items\2HullDiversanta.gai
+		2Hull_Diversant_i=Mods\Reflection\RefSpAgentDefence\DATA\Items\2HullDiversanti.gi
+		2Hull_Diversant_s=Mods\Reflection\RefSpAgentDefence\DATA\Items\2HullDiversants.gi
+		2Hull_Diversant2_a=Mods\Reflection\RefSpAgentDefence\DATA\Items\2HullDiversant2a.gai
+		2Hull_Diversant2_i=Mods\Reflection\RefSpAgentDefence\DATA\Items\2HullDiversant2i.gi
+		2Hull_Diversant2_s=Mods\Reflection\RefSpAgentDefence\DATA\Items\2HullDiversant2s.gi
+		2Hull_Diversant3_a=Mods\Reflection\RefSpAgentDefence\DATA\Items\2HullDiversant3a.gai
+		2Hull_Diversant3_i=Mods\Reflection\RefSpAgentDefence\DATA\Items\2HullDiversant3i.gi
+		2Hull_Diversant3_s=Mods\Reflection\RefSpAgentDefence\DATA\Items\2HullDiversant3s.gi
+		2Hull_SpAgentHull_a=Mods\Reflection\RefSpAgentDefence\DATA\Items\2HullSpAgenta.gai
+		2Hull_SpAgentHull_i=Mods\Reflection\RefSpAgentDefence\DATA\Items\2HullSpAgenti.gi
+		2Hull_SpAgentHull_s=Mods\Reflection\RefSpAgentDefence\DATA\Items\2HullSpAgents.gi
+	}
+	Ship ^{
+		Diversion=Mods\Reflection\RefSpAgentDefence\DATA\Ship\Diversant.hai
+		Diversions=Mods\Reflection\RefSpAgentDefence\DATA\Ship\Diversants.hai
+		Diversion2=Mods\Reflection\RefSpAgentDefence\DATA\Ship\Diversant2.hai
+		Diversion2s=Mods\Reflection\RefSpAgentDefence\DATA\Ship\Diversant2s.hai
+		Diversion3=Mods\Reflection\RefSpAgentDefence\DATA\Ship\Diversant3.hai
+		Diversion3s=Mods\Reflection\RefSpAgentDefence\DATA\Ship\Diversant3s.hai
+		SpAgentHull=Mods\Reflection\RefSpAgentDefence\DATA\Ship\warrioragent.hai
+		SpAgentHulls=Mods\Reflection\RefSpAgentDefence\DATA\Ship\warrioragents.hai
+	}
+	ShipP ^{
+		2Diversion=Mods\Reflection\RefSpAgentDefence\DATA\ShipP\2Diversant.gi
+		2Diversion2=Mods\Reflection\RefSpAgentDefence\DATA\ShipP\2Diversant2.gi
+		2Diversion3=Mods\Reflection\RefSpAgentDefence\DATA\ShipP\2Diversant3.gi
+		2SpAgentHull=Mods\Reflection\RefSpAgentDefence\DATA\ShipP\2SpAgentHull.gi
+	}
+	MsgPlayer ^{
+        2DivA=Mods\Reflection\RefSpAgentDefence\DATA\Msg\2DivA.gi
+        2DivD=Mods\Reflection\RefSpAgentDefence\DATA\Msg\2DivD.gi
+        2DivN=Mods\Reflection\RefSpAgentDefence\DATA\Msg\2DivN.gi
+    }
+}

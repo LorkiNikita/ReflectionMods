@@ -1,0 +1,12 @@
+Data ^{
+    SE ^{
+		Hole ^{
+            00 ^{
+                Image=Bm.Hole.hole
+                ImageMap=GI,Bm.Hole.Map
+                ImageO=Bm.Hole.holeo
+                PosZ=Hole
+            }
+        }
+	}
+}

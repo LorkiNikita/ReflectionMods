@@ -1,0 +1,97 @@
+Music ^{
+    ArcadeBattle ^{
+    }
+    BK ^{
+    }
+    Battle ^{
+        RefTapok1=Mods\Reflection\RefMusicTapok\DATA\Music\battle\Decadence.dat
+        RefTapok1=Mods\Reflection\RefMusicTapok\DATA\Music\battle\Down_with_the_Sickness.dat
+        RefTapok1=Mods\Reflection\RefMusicTapok\DATA\Music\battle\Feel_Invincible.dat
+        RefTapok1=Mods\Reflection\RefMusicTapok\DATA\Music\battle\Monster.dat
+        RefTapok1=Mods\Reflection\RefMusicTapok\DATA\Music\battle\Primo_Victoria.dat
+        RefTapok1=Mods\Reflection\RefMusicTapok\DATA\Music\battle\Sonne.dat
+        RefTapok1=Mods\Reflection\RefMusicTapok\DATA\Music\battle\The_Baddest.dat
+        RefTapok1=Mods\Reflection\RefMusicTapok\DATA\Music\battle\The_Pretender.dat
+        RefTapok1=Mods\Reflection\RefMusicTapok\DATA\Music\battle\War_of_Change.dat
+        RefTapok1=Mods\Reflection\RefMusicTapok\DATA\Music\battle\Wash_It_All_Away.dat
+        RefTapok1=Mods\Reflection\RefMusicTapok\DATA\Music\battle\Otzvuki_Tmy.dat
+        RefTapok1=Mods\Reflection\RefMusicTapok\DATA\Music\battle\Probil_Chas.dat
+        RefTapok1=Mods\Reflection\RefMusicTapok\DATA\Music\battle\We_Drink_Your_Blood.dat
+        RefTapok1=Mods\Reflection\RefMusicTapok\DATA\Music\battle\Du_Hast.dat
+        RefTapok1=Mods\Reflection\RefMusicTapok\DATA\Music\battle\Battle_For_Glory.dat
+        RefTapok1=Mods\Reflection\RefMusicTapok\DATA\Music\battle\DesertSong.dat
+        RefTapok1=Mods\Reflection\RefMusicTapok\DATA\Music\battle\Vysota_776.dat
+        RefTapok1=Mods\Reflection\RefMusicTapok\DATA\Music\battle\Vysota_776.dat
+        RefTapok1=Mods\Reflection\RefMusicTapok\DATA\Music\battle\LifeForTzar.dat
+    }
+    MC ^{
+    }
+    Nation ^{
+        Fei ^{
+        }
+        FeiPirate ^{
+        }
+        Gaal ^{
+        }
+        GaalPirate ^{
+        }
+        Maloc ^{
+        }
+        MalocPirate ^{
+        }
+        None ^{
+        }
+        Peleng ^{
+        }
+        PelengPirate ^{
+        }
+        People ^{
+        }
+        PeoplePirate ^{
+        }
+    }
+    PB ^{
+        RefTapok1=Mods\Reflection\RefMusicTapok\DATA\Music\pirate\Du_Riechst_So_Gut.dat
+    }
+    Quest ^{
+        RefTapok1=Mods\Reflection\RefMusicTapok\DATA\Music\quest\Ich_Will.dat
+        RefTapok1=Mods\Reflection\RefMusicTapok\DATA\Music\quest\Nothing_Else_Matters.dat
+        RefTapok1=Mods\Reflection\RefMusicTapok\DATA\Music\quest\Paradise.dat
+    }
+    RC ^{
+    }
+    Robot ^{
+        RefTapok1=Mods\Reflection\RefMusicTapok\DATA\Music\robot\The_Only.dat
+        RefTapok1=Mods\Reflection\RefMusicTapok\DATA\Music\robot\Toxicity.dat
+        RefTapok1=Mods\Reflection\RefMusicTapok\DATA\Music\robot\Ich_Will.dat
+        RefTapok1=Mods\Reflection\RefMusicTapok\DATA\Music\robot\Battle_For_Moscow.dat
+        RefTapok1=Mods\Reflection\RefMusicTapok\DATA\Music\robot\Attero_Dominatus.dat
+        RefTapok1=Mods\Reflection\RefMusicTapok\DATA\Music\robot\Soviet_Marsh.dat
+        RefTapok1=Mods\Reflection\RefMusicTapok\DATA\Music\robot\Steel_Commanders.dat
+        RefTapok1=Mods\Reflection\RefMusicTapok\DATA\Music\robot\BlackNovember.dat
+        RefTapok1=Mods\Reflection\RefMusicTapok\DATA\Music\robot\Halkin-Gol.dat
+        RefTapok1=Mods\Reflection\RefMusicTapok\DATA\Music\robot\MyasnojBor.dat
+        RefTapok1=Mods\Reflection\RefMusicTapok\DATA\Music\robot\UnitedPower.dat
+        RefTapok1=Mods\Reflection\RefMusicTapok\DATA\Music\robot\BitvaZaMoskvu.dat
+        RefTapok1=Mods\Reflection\RefMusicTapok\DATA\Music\robot\Bismarck.dat
+        RefTapok1=Mods\Reflection\RefMusicTapok\DATA\Music\robot\Panzerkampf.dat
+        RefTapok1=Mods\Reflection\RefMusicTapok\DATA\Music\robot\NightWitches.dat
+        RefTapok1=Mods\Reflection\RefMusicTapok\DATA\Music\robot\TheLastStand.dat
+        RefTapok1=Mods\Reflection\RefMusicTapok\DATA\Music\robot\Osovetz.dat
+    }
+    SB ^{
+    }
+    Song ^{
+    }
+    StarMap ^{
+        RefTapok1=Mods\Reflection\RefMusicTapok\DATA\Music\fly\Auslander.dat
+        RefTapok1=Mods\Reflection\RefMusicTapok\DATA\Music\fly\Nothing_Else_Matters.dat
+    }
+    UB ^{
+    }
+    WB ^{
+    }
+    Win ^{
+        RefTapok=Mods\Reflection\RefMusicTapok\DATA\Music\win\Hard_Rock_Aliluya.dat
+    }
+}
