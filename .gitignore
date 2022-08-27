@@ -3,3 +3,10 @@
 **/*.gai
 RefMusic/DATA
 RefMusicTapok/DATA
+**/*.png
+**/*.jpg
+**/*.bmp
+**/*.psd
+**/*.zip
+**/*.7z
+**/*.rar
