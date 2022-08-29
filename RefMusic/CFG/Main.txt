@@ -1,0 +1,213 @@
+Music ^{
+    ArcadeBattle ^{
+        RefMusic1=Mods\Reflection\RefMusic\DATA\Music\Hyper\DarkSky.dat
+        RefMusic1=Mods\Reflection\RefMusic\DATA\Music\Hyper\Communication.dat
+        RefMusic1=Mods\Reflection\RefMusic\DATA\Music\Hyper\Olymp.dat
+        RefMusic1=Mods\Reflection\RefMusic\DATA\Music\Hyper\Second.dat
+        RefMusic1=Mods\Reflection\RefMusic\DATA\Music\Hyper\DoYouKnow.ogg
+        RefMusic1=Mods\Reflection\RefMusic\DATA\Music\Hyper\ModernThinking.ogg
+    }
+    BK ^{
+    }
+    Base ^{
+        RefMusic1=Mods\Reflection\RefMusic\DATA\Music\Base\StellarisSuite.ogg
+    }
+    Battle ^{
+        RefMusic1=Mods\Reflection\RefMusic\DATA\Music\Battle\Darkling.dat
+        RefMusic1=Mods\Reflection\RefMusic\DATA\Music\Battle\Eternal Terminal.dat
+        RefMusic1=Mods\Reflection\RefMusic\DATA\Music\Battle\Our Tanks Attack.dat
+        RefMusic1=Mods\Reflection\RefMusic\DATA\Music\Battle\BattleInSpace.dat
+        RefMusic1=Mods\Reflection\RefMusic\DATA\Music\Battle\Arena.dat
+        RefMusic1=Mods\Reflection\RefMusic\DATA\Music\Battle\Centurion.dat
+        RefMusic1=Mods\Reflection\RefMusic\DATA\Music\Battle\Champion.dat
+        RefMusic1=Mods\Reflection\RefMusic\DATA\Music\Battle\DarkShrine.dat
+        RefMusic1=Mods\Reflection\RefMusic\DATA\Music\Battle\DungeonOfFears.dat
+        RefMusic1=Mods\Reflection\RefMusic\DATA\Music\Battle\FlameBlood.dat
+        RefMusic1=Mods\Reflection\RefMusic\DATA\Music\Battle\FromDarkestDungeons.dat
+        RefMusic1=Mods\Reflection\RefMusic\DATA\Music\Battle\Abhwer.dat
+        RefMusic1=Mods\Reflection\RefMusic\DATA\Music\Battle\Afa.dat
+        RefMusic1=Mods\Reflection\RefMusic\DATA\Music\Battle\Afag.dat
+        RefMusic1=Mods\Reflection\RefMusic\DATA\Music\Battle\AFW.dat
+        RefMusic1=Mods\Reflection\RefMusic\DATA\Music\Battle\Afzh.dat
+        RefMusic1=Mods\Reflection\RefMusic\DATA\Music\Battle\Libertatia.dat
+        RefMusic1=Mods\Reflection\RefMusic\DATA\Music\Battle\Off-road.dat
+        RefMusic1=Mods\Reflection\RefMusic\DATA\Music\Battle\ThroughUniverse.dat
+        RefMusic1=Mods\Reflection\RefMusic\DATA\Music\Battle\Uwbfb.dat
+        RefMusic1=Mods\Reflection\RefMusic\DATA\Music\Battle\WildWest.dat
+        RefMusic1=Mods\Reflection\RefMusic\DATA\Music\Battle\Wraith.dat
+        RefMusic1=Mods\Reflection\RefMusic\DATA\Music\Battle\Yaa.dat
+        RefMusic1=Mods\Reflection\RefMusic\DATA\Music\Battle\Yabem.dat
+        RefMusic1=Mods\Reflection\RefMusic\DATA\Music\Battle\Fight3Cover.dat
+        RefMusic1=Mods\Reflection\RefMusic\DATA\Music\Battle\DuelCover.dat
+        RefMusic1=Mods\Reflection\RefMusic\DATA\Music\Battle\FightLikeLive.ogg
+        RefMusic1=Mods\Reflection\RefMusic\DATA\Music\Battle\BattleForSupremacy.ogg
+    }
+    MC ^{
+    }
+    Nation ^{
+        Fei ^{
+        }
+        FeiPirate ^{
+        }
+        Gaal ^{
+        }
+        GaalPirate ^{
+        }
+        Maloc ^{
+        }
+        MalocPirate ^{
+        }
+        None ^{
+            RefMusic1=Mods\Reflection\RefMusic\DATA\Music\None\Adding the Sun.dat
+            RefMusic1=Mods\Reflection\RefMusic\DATA\Music\None\TheBorning.dat
+            RefMusic1=Mods\Reflection\RefMusic\DATA\Music\None\Thoughts Japan.dat
+            RefMusic1=Mods\Reflection\RefMusic\DATA\Music\None\Serenity.dat
+            RefMusic1=Mods\Reflection\RefMusic\DATA\Music\None\LastAutumnBreath.dat
+        }
+        Peleng ^{
+        }
+        PelengPirate ^{
+        }
+        People ^{
+            RefMusic1=Mods\Reflection\RefMusic\DATA\Music\People\Peoples8.dat
+        }
+        PeoplePirate ^{
+        }
+    }
+    PB ^{
+        RefMusic1=Mods\Reflection\RefMusic\DATA\Music\Pirate\WildWest.dat
+        RefMusic1=Mods\Reflection\RefMusic\DATA\Music\Pirate\DepthCover.dat
+    }
+    Quest ^{
+        RefMusic1=Mods\Reflection\RefMusic\DATA\Music\Quest\Beauty Flow.dat
+        RefMusic1=Mods\Reflection\RefMusic\DATA\Music\Quest\Adding the Sun.dat
+        RefMusic1=Mods\Reflection\RefMusic\DATA\Music\Quest\Envision.dat
+        RefMusic1=Mods\Reflection\RefMusic\DATA\Music\Quest\Half Mystery.dat
+        RefMusic1=Mods\Reflection\RefMusic\DATA\Music\Quest\ClerckFast.dat
+        RefMusic1=Mods\Reflection\RefMusic\DATA\Music\Quest\Eternity.dat
+        RefMusic1=Mods\Reflection\RefMusic\DATA\Music\Quest\OvernightShipping.dat
+        RefMusic1=Mods\Reflection\RefMusic\DATA\Music\Quest\Wind.dat
+        RefMusic1=Mods\Reflection\RefMusic\DATA\Music\Quest\SignalsOfCivs.dat
+        RefMusic1=Mods\Reflection\RefMusic\DATA\Music\Quest\PlanetaryQ3.dat
+        RefMusic1=Mods\Reflection\RefMusic\DATA\Music\Quest\First.dat
+        RefMusic1=Mods\Reflection\RefMusic\DATA\Music\Quest\AbandonHopeAllYeWhoEnterHere.dat
+        RefMusic1=Mods\Reflection\RefMusic\DATA\Music\Quest\Amnesia.dat
+        RefMusic1=Mods\Reflection\RefMusic\DATA\Music\Quest\AnotherDream.dat
+        RefMusic1=Mods\Reflection\RefMusic\DATA\Music\Quest\Artemis.dat
+        RefMusic1=Mods\Reflection\RefMusic\DATA\Music\Quest\BringDownSky.dat
+        RefMusic1=Mods\Reflection\RefMusic\DATA\Music\Quest\Fifth.dat
+        RefMusic1=Mods\Reflection\RefMusic\DATA\Music\Quest\ForthType.dat
+        RefMusic1=Mods\Reflection\RefMusic\DATA\Music\Quest\BeyondSoul.dat
+        RefMusic1=Mods\Reflection\RefMusic\DATA\Music\Quest\IllusionRemaster.dat
+        RefMusic1=Mods\Reflection\RefMusic\DATA\Music\Quest\Sixth.dat
+        RefMusic1=Mods\Reflection\RefMusic\DATA\Music\Quest\ISawYourShip.ogg
+        RefMusic1=Mods\Reflection\RefMusic\DATA\Music\Quest\LastPowerCell.ogg
+        RefMusic1=Mods\Reflection\RefMusic\DATA\Music\Quest\LostWormhole.ogg
+        RefMusic1=Mods\Reflection\RefMusic\DATA\Music\Quest\MerchantsLootersGhosts.ogg
+        RefMusic1=Mods\Reflection\RefMusic\DATA\Music\Quest\MinmatarRebelAlliance.ogg
+        RefMusic1=Mods\Reflection\RefMusic\DATA\Music\Quest\NouvelleRouvenorHero.ogg
+        RefMusic1=Mods\Reflection\RefMusic\DATA\Music\Quest\Omens.ogg
+        RefMusic1=Mods\Reflection\RefMusic\DATA\Music\Quest\RedGlowingDust.ogg
+        RefMusic1=Mods\Reflection\RefMusic\DATA\Music\Quest\Smoke.ogg
+        RefMusic1=Mods\Reflection\RefMusic\DATA\Music\Quest\SmthOldSmthNew.ogg
+        RefMusic1=Mods\Reflection\RefMusic\DATA\Music\Quest\ThemeTheUniverse.ogg
+        RefMusic1=Mods\Reflection\RefMusic\DATA\Music\Quest\JourneyThroughGalaxy.ogg
+        RefMusic1=Mods\Reflection\RefMusic\DATA\Music\Quest\RidingSolarWind.ogg
+        RefMusic1=Mods\Reflection\RefMusic\DATA\Music\Quest\DeepSpaceTravels.ogg
+        RefMusic1=Mods\Reflection\RefMusic\DATA\Music\Quest\DistantNebula.ogg
+        RefMusic1=Mods\Reflection\RefMusic\DATA\Music\Quest\Luminescence.ogg
+        RefMusic1=Mods\Reflection\RefMusic\DATA\Music\Quest\SigmaTauri.ogg
+        RefMusic1=Mods\Reflection\RefMusic\DATA\Music\Quest\BirthOfStar.ogg
+        RefMusic1=Mods\Reflection\RefMusic\DATA\Music\Quest\GravitationalConstant.ogg
+        RefMusic1=Mods\Reflection\RefMusic\DATA\Music\Quest\InfiniteBeing.ogg
+    }
+    RC ^{
+    }
+    Robot ^{
+        RefMusic1=Mods\Reflection\RefMusic\DATA\Music\Robot\Robot force Remake.dat
+        RefMusic1=Mods\Reflection\RefMusic\DATA\Music\Robot\Asteriya.dat
+        RefMusic1=Mods\Reflection\RefMusic\DATA\Music\Robot\Ninth.dat
+        RefMusic1=Mods\Reflection\RefMusic\DATA\Music\Robot\Tenth.dat
+    }
+    SB ^{
+    }
+    Song ^{
+    }
+    StarMap ^{
+        RefMusic1=Mods\Reflection\RefMusic\DATA\Music\Fly\Cosmic Storm.dat
+        RefMusic1=Mods\Reflection\RefMusic\DATA\Music\Fly\Dream Catcher.dat
+        RefMusic1=Mods\Reflection\RefMusic\DATA\Music\Fly\Envision.dat
+        RefMusic1=Mods\Reflection\RefMusic\DATA\Music\Fly\Magistar.dat
+        RefMusic1=Mods\Reflection\RefMusic\DATA\Music\Fly\Raving Energy.dat
+        RefMusic1=Mods\Reflection\RefMusic\DATA\Music\Fly\SeaOfSands.dat
+        RefMusic1=Mods\Reflection\RefMusic\DATA\Music\Fly\SignalsOfCivs.dat
+        RefMusic1=Mods\Reflection\RefMusic\DATA\Music\Fly\HeavyDay.dat
+        RefMusic1=Mods\Reflection\RefMusic\DATA\Music\Fly\ImpressionsOfCitadel.dat
+        RefMusic1=Mods\Reflection\RefMusic\DATA\Music\Fly\LoveInSpace.dat
+        RefMusic1=Mods\Reflection\RefMusic\DATA\Music\Fly\AnotherWorlds.dat
+        RefMusic1=Mods\Reflection\RefMusic\DATA\Music\Fly\Yamgbgbg.dat
+        RefMusic1=Mods\Reflection\RefMusic\DATA\Music\Fly\Eighth.dat
+        RefMusic1=Mods\Reflection\RefMusic\DATA\Music\Fly\Vfech.dat
+        RefMusic1=Mods\Reflection\RefMusic\DATA\Music\Fly\WaySielence.dat
+        RefMusic1=Mods\Reflection\RefMusic\DATA\Music\Fly\Eleventh.dat
+        RefMusic1=Mods\Reflection\RefMusic\DATA\Music\Fly\Forth.dat
+        RefMusic1=Mods\Reflection\RefMusic\DATA\Music\Fly\GoodbyeAtlantis.dat
+        RefMusic1=Mods\Reflection\RefMusic\DATA\Music\Fly\Illium.dat
+        RefMusic1=Mods\Reflection\RefMusic\DATA\Music\Fly\AF-ZV.dat
+        RefMusic1=Mods\Reflection\RefMusic\DATA\Music\Fly\Alpes.dat
+        RefMusic1=Mods\Reflection\RefMusic\DATA\Music\Fly\ClearSky.dat
+        RefMusic1=Mods\Reflection\RefMusic\DATA\Music\Fly\Constanta.dat
+        RefMusic1=Mods\Reflection\RefMusic\DATA\Music\Fly\Covi.dat
+        RefMusic1=Mods\Reflection\RefMusic\DATA\Music\Fly\DarkBrotherhood.dat
+        RefMusic1=Mods\Reflection\RefMusic\DATA\Music\Fly\Dlova.dat
+        RefMusic1=Mods\Reflection\RefMusic\DATA\Music\Fly\DreamingOfStars.dat
+        RefMusic1=Mods\Reflection\RefMusic\DATA\Music\Fly\Eawo.dat
+        RefMusic1=Mods\Reflection\RefMusic\DATA\Music\Fly\Evi.dat
+        RefMusic1=Mods\Reflection\RefMusic\DATA\Music\Fly\Gewher.dat
+        RefMusic1=Mods\Reflection\RefMusic\DATA\Music\Fly\GoodLuckComingWars.dat
+        RefMusic1=Mods\Reflection\RefMusic\DATA\Music\Fly\GTA.dat
+        RefMusic1=Mods\Reflection\RefMusic\DATA\Music\Fly\Hyperion.dat
+        RefMusic1=Mods\Reflection\RefMusic\DATA\Music\Fly\Inferno.dat
+        RefMusic1=Mods\Reflection\RefMusic\DATA\Music\Fly\OpinionsOfMisinformed.ogg
+        RefMusic1=Mods\Reflection\RefMusic\DATA\Music\Fly\Ivi.dat
+        RefMusic1=Mods\Reflection\RefMusic\DATA\Music\Fly\Madness.dat
+        RefMusic1=Mods\Reflection\RefMusic\DATA\Music\Fly\MindCosmos.dat
+        RefMusic1=Mods\Reflection\RefMusic\DATA\Music\Fly\Phable.dat
+        RefMusic1=Mods\Reflection\RefMusic\DATA\Music\Fly\StarTravelers.dat
+        RefMusic1=Mods\Reflection\RefMusic\DATA\Music\Fly\TB-3.dat
+        RefMusic1=Mods\Reflection\RefMusic\DATA\Music\Fly\Third.dat
+        RefMusic1=Mods\Reflection\RefMusic\DATA\Music\Fly\TimeMachine.dat
+        RefMusic1=Mods\Reflection\RefMusic\DATA\Music\Fly\Uaz.dat
+        RefMusic1=Mods\Reflection\RefMusic\DATA\Music\Fly\Ugabuga.dat
+        RefMusic1=Mods\Reflection\RefMusic\DATA\Music\Fly\Uturo.dat
+        RefMusic1=Mods\Reflection\RefMusic\DATA\Music\Fly\Fly12Cover.dat
+        RefMusic1=Mods\Reflection\RefMusic\DATA\Music\Fly\LongwayCover.dat
+        RefMusic1=Mods\Reflection\RefMusic\DATA\Music\Fly\MeteorShowerCover.dat
+        RefMusic1=Mods\Reflection\RefMusic\DATA\Music\Fly\ThroughStarsCover.dat
+        RefMusic1=Mods\Reflection\RefMusic\DATA\Music\Fly\Accomplished.ogg
+        RefMusic1=Mods\Reflection\RefMusic\DATA\Music\Fly\AkatMountains.ogg
+        RefMusic1=Mods\Reflection\RefMusic\DATA\Music\Fly\AllRegained.ogg
+        RefMusic1=Mods\Reflection\RefMusic\DATA\Music\Fly\BelowAsteroids.ogg
+        RefMusic1=Mods\Reflection\RefMusic\DATA\Music\Fly\Dealer.ogg
+        RefMusic1=Mods\Reflection\RefMusic\DATA\Music\Fly\EverydayZone.ogg
+        RefMusic1=Mods\Reflection\RefMusic\DATA\Music\Fly\FullOfStars.ogg
+        RefMusic1=Mods\Reflection\RefMusic\DATA\Music\Fly\GreenNebula.ogg
+        RefMusic1=Mods\Reflection\RefMusic\DATA\Music\Fly\OpinionsOfMisinformed.ogg
+        RefMusic1=Mods\Reflection\RefMusic\DATA\Music\Fly\Retribution.ogg
+        RefMusic1=Mods\Reflection\RefMusic\DATA\Music\Fly\RoseOfVictory.ogg
+        RefMusic1=Mods\Reflection\RefMusic\DATA\Music\Fly\SevenClans.ogg
+        RefMusic1=Mods\Reflection\RefMusic\DATA\Music\Fly\SurplusOfArts.ogg
+        RefMusic1=Mods\Reflection\RefMusic\DATA\Music\Fly\AlphaCentauri.ogg
+        RefMusic1=Mods\Reflection\RefMusic\DATA\Music\Fly\FasterThanLightCov.ogg
+        RefMusic1=Mods\Reflection\RefMusic\DATA\Music\Fly\Genesis.ogg
+        RefMusic1=Mods\Reflection\RefMusic\DATA\Music\Fly\InSearchofLife.ogg
+    }
+    UB ^{
+        RefMusic1=Mods\Reflection\RefMusic\DATA\Music\Dominion\ChildvilleCover.dat
+    }
+    WB ^{
+        RefMusic1=Mods\Reflection\RefMusic\DATA\Music\Military\Shadows.dat
+    }
+    Win ^{
+    }
+}

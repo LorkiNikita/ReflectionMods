@@ -1,0 +1,6 @@
+Bm ^{
+	Hole ^{
+		hole=Mods\Reflection\RefGraphics\DATA\Hole\hole.gai
+		holeo=Mods\Reflection\RefGraphics\DATA\Hole\holeo.gai
+	}
+}

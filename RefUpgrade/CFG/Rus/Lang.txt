@@ -1,0 +1,1509 @@
+MicroModuls ^{
+    ExpPilotBridge_Wheatley_MM ^{
+        Color=0,153,255
+        CustomTag=Wheatley_MM
+        Equipments=Any
+        KindGraph=Wheatley
+        LockedAcryn=3
+        Name=Уитли
+        NonSearchable=1
+        NotRemovable=1
+        Owner=People
+        Priority=0
+        Special=1
+        Text=Необычайный артефакт, представляющий<br>собой исключительный образец древней<br><color=0,153,255>земной</color> технологии.
+        Text=<clr><clrEnd>
+        Text=За длительное время пребывания в открытом космосе динамики устройства пришли в полную негодность, так что вам остаётся лишь гадать, какие тайны мог бы поведать этот удивительный прибор.
+        Text=<clr><clrEnd>
+        Text=Сила энергетического оружия: <color=0,153,255>+80</color> ед.
+        Text=Сила осколочного оружия: <color=0,153,255>+80</color> ед.
+        Text=Сила ракетного оружия: <color=0,153,255>+80</color> ед.
+        Text=Дальность стрельбы: <color=0,153,255>+100</color> ед.
+        Text=Броня корпуса: <color=0,153,255>+12</color> ед.
+        Text=Скорость двигателя: <color=0,153,255>+350</color> ед.
+        Text=Дальность прыжка: <color=0,153,255>+25</color> пк.
+        Text=Объём бака: <color=0,153,255>+140</color> ед.
+        Text=Дальность радара: <color=0,153,255>+4000</color> млн. км.
+        Text=Мощность сканера: <color=0,153,255>+20</color> ед.
+        Text=Эффективность дроида: <color=0,153,255>+100</color> ед.
+        Text=Мощность захвата: <color=0,153,255>+250</color> ед.
+        Text=Дальность захвата: <color=0,153,255>+250</color> ед.
+        Text=Генератор поля: <color=0,153,255>+20</color> ед.
+        Text=Навык обаяния: <color=0,153,255>+4</color>
+        Text=Навык лидерства: <color=0,153,255>-3</color>
+        UniqueMM=1
+        bonDef=20
+        bonDroid=100
+        bonFuel=140
+        bonHook=250
+        bonHookRadius=250
+        bonHull=12
+        bonJump=25
+        bonRadar=4000
+        bonScan=20
+        bonSkill5=4
+        bonSkill6=-3
+        bonSpeed=350
+        bonWEnergy=80
+        bonWMissile=80
+        bonWRadius=50
+        bonWSplinter=80
+    }
+    484 ^{
+        Cost=600
+        Equipments=Hull
+        Fragility=110
+        KindGraph=F
+        Name=Корпус "Добрейший лякуша"
+        Priority=50
+        Size=110
+        Special=1
+        Text=<color=248,252,248>Данный корпус эксклюзивно прокачан известным пеленгским мастером Ицзибитом. Система управления настроена на максимальную атакующую мощь. Точно не подойдет любителям поторговать.</color>
+        Text=Сила энергетического оружия: <bonWEnergy> ед.
+        Text=Сила осколочного оружия: <bonWSplinter> ед.
+        Text=Сила ракетного оружия: <bonWMissile> ед.
+		Text=Навык торговли: <bonSkill4>
+        bonWEnergy=24
+        bonWMissile=24
+        bonWSplinter=24
+		bonWRadius=50
+		bonSkill4=-6		
+    }
+    485 ^{
+        Cost=600
+        Equipments=Hull
+		Fragility=60
+        KindGraph=G
+        Name=Корпус "Безобиднейший корсар"
+        Priority=50
+        Size=100
+        Special=1
+        Text=<color=248,252,248>Данный корпус эксклюзивно прокачан известным пеленгским мастером Ицзибитом. Вся структура корабля разработана с учетом максимальной защиты. Его минус - это сложные электронные системы управления. Из-за их медлительности и неточности навыки пилота мало на что влияют.</color>
+        Text=Броня корпуса: <bonHull> ед.
+        Text=Генератор поля: <bonDef> ед.
+        Text=Навык атаки: <bonSkill1>
+		Text=Навык маневренности: <bonSkill2>
+        Text=Навык техники: <bonSkill3>
+        bonDef=13
+        bonHull=10
+        bonSkill1=-2
+		bonSkill2=-2
+        bonSkill3=-2
+    }
+    486 ^{
+        Cost=600
+        Equipments=Hull
+        Fragility=90
+        KindGraph=K
+        Name=Корпус "Честнейший ренегал"
+        Priority=50
+        Size=100
+        Special=1
+        Text=<color=248,252,248>Данный корпус эксклюзивно прокачан известным пеленгским мастером Ицзибитом. Благодаря инновационной технологии с шестью крыльями, создает вокруг корабля энергетическое поле, уменьшающее массу корабля, усиливающее дальность гиперпрыжка и, как приятный бонус, усиливающее работу захвата. Неприятный бонус в том, что его владельцу никто не дает скидок из зависти.</color>
+        Text=Дальность прыжка: <bonJump> ед.
+        Text=Дальность захвата: <bonHookRadius> ед.
+		Text=Мощность ГЗП: <bonDef>%
+        Text=Масса корабля: <bonMass>%
+        Text=Навык торговли: <bonSkill4>
+        bonHookRadius=150
+		bonDef=-20
+        bonJump=25
+        bonMass=-40
+        bonSkill4=-6
+    }
+    487 ^{
+        Cost=600
+        Equipments=Hull
+        Fragility=120
+        KindGraph=I
+        Name=Корпус "Молния" V
+        Priority=50
+        Size=130
+        Special=1
+        Text=<color=248,252,248>Агрессивный внешне спецкорпус, модернизированный в тюнинговой компании "Дядя Вася и сыновья", разработан для тех, кто любит путешествовать по галактике, предпочитая торговые операции и правительственные приключения кровопролитным сражениям.</color>
+        Text=Дальность радара: <bonRadar> ед.
+        Text=Дальность прыжка: <bonJump> ед.
+        Text=Генератор поля: <bonDef> ед.
+		Text=Навык атаки: <bonSkill1>
+		Text=Навык торговли: <bonSkill4>
+        bonDef=-18
+		bonSkill1=-6
+		bonSkill4=5
+        bonJump=40
+		bonSpeed=400
+        bonRadar=1000
+    }
+    488 ^{
+        Cost=600
+        Equipments=Hull
+        KindGraph=H
+        Name=Корпус "Броненосец" V
+        Priority=50
+        Size=130
+        Special=1
+        Text=<color=248,252,248>Экспериментальный образец корпуса серии "Броненосец" нового поколения. Таких корпусов нет в продаже по причине их чрезмерной дороговизны в производстве, но один экземпляр был построен и успешно прошел все испытания. Ни у кого не повернется язык назвать это чудо инженерной мысли "утюгом".</color>
+        Text=Сила энергетического оружия: <bonWEnergy> ед.
+        Text=Сила осколочного оружия: <bonWSplinter> ед.
+        Text=Генератор поля: <bonDef> ед.
+        Text=Скорость двигателя: <bonSpeed> ед.
+        Text=Навык маневренности: <bonSkill2>
+		Text=Броня корпуса: <bonHull>
+        bonDef=22
+		bonHull=12
+        bonSkill2=-2
+        bonSpeed=-400
+        bonWEnergy=30
+        bonWSplinter=32
+    }
+    489 ^{
+        Cost=600
+        Equipments=Hull
+        Fragility=68
+        KindGraph=J
+        Name=Корпус "Ушастик" V
+        Priority=50
+        Size=90
+        Special=1
+        Text=<color=248,252,248>Данный эксклюзивный корпус получен прямиком из дизайнерского ателье Фаринапини, где его полностью переработали. Кабина пилота убрана в кожу и дерево светлых тонов, в ней есть бар и стереосистема класса hi-hi. Снаружи корпус украшен ювелирными камнями от Свароковски и покрыт слоем специальной защиты, который не позволит всей этой красоте отвалиться при первом же входе в атмосферу.</color>
+        Text=Сила ракетного оружия: <bonWMissile> ед.
+        Text=Навык обаяния: <bonSkill5>
+        bonSkill5=5
+        bonWMissile=60
+    }
+    490 ^{
+		Fragility=40
+	    Text=<color=248,252,248>Современные технологии смогли адаптировать доисторического великана для использования рейнджерами. Тем не менее, внутри периодически раздается странная музыка, напоминающая марш, а боевая мощь этой махины продолжает поражать даже самых прожженных вояк.</color>
+		Text=Навык атаки: <bonSkill1>
+        Text=Навык маневренности: <bonSkill2>
+		Text=Навык обаяния: <bonSkill5>
+        Text=Навык лидерства: <bonSkill6>
+		Text=Броня корпуса: <bonHull>
+		Text=Дальность стрельбы: <bonWRadius>
+		Text=Мощность осколочного оружия: <bonWSplinter> ед.
+        Text=Мощность ракетного оружия: <bonWMissile> ед.
+        Text=Мощность энергетического оружия: <bonWEnergy> ед.
+		Text=Мощность ГЗП: <bonDef>
+		Size=130
+		bonDef=20
+        bonHull=15
+        bonSkill1=4
+        bonSkill2=2
+        bonSkill5=-4
+        bonSkill6=3
+		bonWMissile=-10
+		bonWEnergy=-10
+        bonWSplinter=-10
+		bonWRadius=50
+        bonSlotForsage=1
+        bonSlotWeapon=5
+    }
+    LEOUnionRachehan ~{
+        Cost=900
+        Equipments=Hull
+        HullGraphSize=140
+        KindGraph=G0
+        CustomTag=UnionRachehan
+        BlockMM=1
+        Name=Рачехан
+        Priority=50
+        Special=1
+        Text=<color=248,252,248>Пиратский корабль серии "Р". Модель "Рачехан" предназначена для защиты своих территорий.</color>
+        Text=Навык маневренности: <bonSkill2>
+        Text=Навык торговли: <bonSkill4>
+        Text=Навык обаяния: <bonSkill5>
+        Text=Броня корпуса: <bonHull>
+        Text=Починка дроидом: <bonDroid>
+        Text=Дальность стрельбы: <bonWRadius>
+        Text=Дальность радара: <bonRadar>
+        Text=Дальность прыжка: <bonJump>
+        Text=Скорость двигателя: <bonSpeed>
+        Text=Масса корабля: <clr>+25%<clrEnd>
+        bonDroid=50
+        bonHull=15
+        bonJump=25
+        bonMass=25
+        bonRadar=1500
+        bonSkill2=-4
+        bonSkill4=-6
+        bonSkill5=-6
+        bonSlotForsage=-1
+        bonSlotWeapon=-1
+        bonSpeed=-300
+        bonWRadius=500
+    }
+    LEOUnionNovaX3 ~{
+        Cost=600
+        Equipments=Hull
+        HullGraphSize=125
+        KindGraph=Nova
+        CustomTag=UnionNovaX3
+        BlockMM=1
+        Name=Нова
+        Priority=50
+        Special=1
+        Text=<color=248,252,248>Этот образец, найден пиратами в другом рукаве галактики. Рачехан был не единственным, кто покидал данный рукав. Образец был перехвачен боевой группой рейнджеров во время транспортировки совершенно случайно. Инженеры коалиции поставили новейшие боевые системы на этот Корпус "Нова", против пиратов и коалиции. Однако, ограниченый обзор не дает точно прицеливаться, а пиратский стиль и "боевая окраска" отпугивают любого пилота, кого бы можно было взять в напарники.<br> В борт-компьютере корабля была занесена краткая информация, видимо, о проектировании этого образца.</color><br> <br><color=70,130,180>Когда испытанную аргонскую Элиту отправили в отставку, аргонский флот остался без истребителя класса М3. Затем кораблестроители из сектора Омикрон Лиры представили проект нового корабля, который после двух лет испытаний был запущен в серию. Так появилась Нова, полностью заменившая устаревшую Элиту. Нова может нести тяжелое вооружение, она оснащена задней турелью. Этот корабль надолго вошел в состав аргонского флота.</color>
+        Text=Мощность захвата: <bonHook> ед.
+        Text=Дальность захвата: <bonHookRadius>
+        Text=Скорость двигателя: <bonSpeed> ед.
+        Text=Дальность радара: <bonRadar>
+        Text=Мощность осколочного оружия: <bonWSplinter> ед.
+        Text=Мощность ракетного оружия: <bonWMissile> ед.
+        Text=Мощность энергетического оружия: <bonWEnergy> ед.
+        Text=Навык точности: <bonSkill1> ед.
+        Text=Навык обаяния: <bonSkill5> ед.
+        Text=Навык лидерства: <bonSkill6> ед.
+        bonSkill1=-2
+        bonSkill5=-4
+        bonSkill6=-6
+        bonSlotWeapon=-2
+        bonHook=250
+        bonHookRadius=150
+        bonSpeed=1000
+        bonRadar=3000
+        bonWEnergy=-24
+        bonWMissile=-32
+        bonWSplinter=-38
+    }
+    UnionMod_NormandyBM ~{
+        CustomTag=NormandyBM
+        Equipments=Hull
+        KindGraph=Normandy
+        Name=Нормандия SR-2
+        Priority=50
+        Special=1
+        Text=<color=248,252,248>Прототип космического фрегата-разведчика. Проходит полевые испытания в спецвойсках коалиции. В разработке корпуса широко применялись новейшие акриновые технологии. Оснащён ИИ управления системами корабля. Функциональность ограничена.</color>
+        Text=Навык атаки: <bonSkill1>
+        Text=Навык маневренности: <bonSkill2>
+        Text=Скорость двигателя: <bonSpeed> ед.
+        Text=Генератор поля: <bonDef> ед.
+        Text=Починка дроидом: <bonDroid> ед.
+        Text=Сила энергетического оружия: <bonWEnergy> ед.
+        Text=Сила осколочного оружия: <bonWSplinter> ед.
+		Text=Броня корпуса: <bonHull> ед.
+        bonDef=16
+		bonHull=8
+        bonDroid=35
+        bonSkill1=3
+        bonSkill2=3
+        bonSpeed=-200
+        bonWEnergy=20
+        bonWSplinter=25
+        bonSlotWeapon=-2
+        HullGraphSize=170
+    }
+    UnionMod_NormandyRM ~{
+        CustomTag=NormandyRM
+        Equipments=Hull
+        KindGraph=Normandy
+        Name=Нормандия SR-2
+        Priority=50
+        Special=1
+        Text=<color=248,252,248>Прототип космического фрегата-разведчика. Проходит полевые испытания в спецвойсках коалиции. В разработке корпуса широко применялись новейшие акриновые технологии. Оснащён ИИ управления системами корабля. Функциональность ограничена.</color>
+        Text=Навык атаки: <bonSkill1>
+        Text=Навык маневренности: <bonSkill2>
+        Text=Навык торговли: <bonSkill4>
+        Text=Скорость двигателя: <bonSpeed> ед.
+        Text=Дальность прыжка: <bonJump> ед.
+        Text=Радиус радара: <bonRadar> ед.
+		Text=Броня корпуса: <bonHull> ед.
+        bonJump=25
+		bonHull=-8
+        bonRadar=800
+        bonSkill1=-3
+        bonSkill2=-3
+        bonSpeed=250
+        bonSlotWeapon=-2
+        HullGraphSize=170
+    }
+	ShuMM_TauhitHull ^{
+        Cost=600
+        Equipments=Hull
+        FragilityEnergy=75
+        FragilityMissile=75
+        FragilitySplinter=75
+        KindGraph=Tauhit
+        LockedAcryn=3
+        Name=Корпус "Таухито"
+        NonSearchable=1
+        Owner=People
+        Priority=10
+        Size=100
+        Special=1
+        Text=<color=248,252,248>Старинная разработка Коалиции, переходившая лишь потомкам участников её тестирования в качестве наследства, но лишенная особых свойств, пока диск с данными об оригинальном проекте не был найден неким рейнджером. Корпус был воссоздан специалистами из сети центров рейнджеров, максимально приближенный к изначальной задумке - бортовой компьютер вводит пилота в киберпространство, поразительно повышая его скорость и реакцию, а также максимизируя работу сканера и радара. Расплачиваться приходится частично утерянной связью с реальностью, приводящей к снижению социальных способностей пилота.</color>
+        Text=<clr><clrEnd>
+        Text=Навык точности: <bonSkill1>
+        Text=Навык манёвренности: <bonSkill2>
+		Text=Навык техники: <bonSkill3>
+        Text=Дальность стрельбы: <bonWRadius> ед.
+        Text=Дальность радара: <bonRadar> млн. км.
+        Text=Мощность сканера: <bonScan> ед.
+        Text=Масса корабля: <bonMass><clr>%<clrEnd>
+        Text=Скорость двигателя: <bonSpeed> ед.
+		Text=Скорость захвата: <bonHookMaxSpeed>
+        bonMass=-35
+        bonRadar=1500
+        bonScan=12
+        bonSkill1=3
+        bonSkill2=3
+		bonSkill3=3
+		bonSpeed=500
+        bonWRadius=25
+		bonHookMaxSpeed=10
+		bonHookMinSpeed=10
+    }
+    ExpScienceRanks_AcrynSeed ^{
+        CustomTag=ExpScienceRanks_AcrynSeed
+        LockedAcryn=3
+        NonSearchable=1
+        Priority=0
+        Special=1
+    }
+	ExpHulls_Bolide1 ^{
+        Cost=200
+        Equipments=Hull
+        Fragility=105
+        KindGraph=3
+        LockedAcryn=3
+        Name=Корпус "Болид" I
+        NonSearchable=1
+        Priority=10
+        Size=100
+        Special=1
+        Text=Скорость двигателя: <bonSpeed> ед.
+        Text=Дальность прыжка: <bonJump> пк.
+        Text=Дальность радара: <bonRadar> млн. км.
+        Text=Броня корпуса: <bonHull> ед.
+        bonHull=-2
+        bonJump=5
+        bonRadar=250
+        bonSlotArt=-2
+		bonSlotDroid=-1
+        bonSlotWeapon=-2
+        bonSpeed=300
+    }
+    ExpHulls_Bolide2 ^{
+        Cost=300
+        Equipments=Hull
+        Fragility=105
+        KindGraph=3
+        LockedAcryn=3
+        Name=Корпус "Болид" II
+        NonSearchable=1
+        Priority=30
+        Size=100
+        Special=1
+        Text=Скорость двигателя: <bonSpeed> ед.
+        Text=Дальность прыжка: <bonJump> пк.
+        Text=Дальность радара: <bonRadar> млн. км.
+        Text=Броня корпуса: <bonHull> ед.
+		Text=Мощность сканера: <bonScan> ед.
+        bonHull=-4
+        bonJump=8
+        bonRadar=400
+		bonScan=5
+        bonSlotArt=-2
+		bonSlotDroid=-1
+        bonSlotWeapon=-2
+        bonSpeed=400
+    }
+    ExpHulls_Bolide3 ^{
+        Cost=400
+        Equipments=Hull
+        Fragility=105
+        KindGraph=3
+        LockedAcryn=3
+        Name=Корпус "Болид" III
+        NonSearchable=1
+        Priority=50
+        Size=100
+        Special=1
+        Text=Скорость двигателя: <bonSpeed> ед.
+        Text=Дальность прыжка: <bonJump> пк.
+        Text=Дальность радара: <bonRadar> млн. км.
+        Text=Броня корпуса: <bonHull> ед.
+		Text=Мощность сканера: <bonScan> ед.
+        bonHull=-6
+        bonJump=12
+        bonRadar=580
+		bonScan=10
+        bonSlotArt=-2
+		bonSlotDroid=-1
+        bonSlotWeapon=-2
+        bonSpeed=500
+    }
+    ExpHulls_Bolide4 ^{
+        Cost=500
+        Equipments=Hull
+        Fragility=105
+        KindGraph=3
+        LockedAcryn=3
+        Name=Корпус "Болид" IV
+        NonSearchable=1
+        Priority=70
+        Size=100
+        Special=1
+        Text=Скорость двигателя: <bonSpeed> ед.
+        Text=Дальность прыжка: <bonJump> пк.
+        Text=Дальность радара: <bonRadar> млн. км.
+        Text=Броня корпуса: <bonHull> ед.
+		Text=Мощность сканера: <bonScan> ед.
+        bonHull=-8
+        bonJump=15
+        bonRadar=800
+		bonScan=13
+        bonSpeed=600
+    }
+    ExpHulls_Bolide5 ^{
+        Cost=600
+        Equipments=Hull
+        Fragility=105
+        KindGraph=3
+        LockedAcryn=3
+        Name=Корпус "Метеор"
+        NonSearchable=1
+        Priority=100
+        Size=100
+        Special=1
+        Text=Скорость двигателя: <bonSpeed> ед.
+        Text=Дальность прыжка: <bonJump> пк.
+        Text=Дальность радара: <bonRadar> млн. км.
+		Text=Мощность сканера: <bonScan> ед.
+        bonJump=30
+        bonRadar=1000
+		bonScan=18
+        bonSpeed=1000
+    }
+    ExpHulls_Killer1 ^{
+        Cost=200
+        Equipments=Hull
+        Fragility=100
+        KindGraph=1
+        LockedAcryn=3
+        Name=Корпус "Убийца" I
+        NonSearchable=1
+        Priority=10
+        Size=100
+        Special=1
+        Text=Навык точности: <bonSkill1>
+        Text=Сила энергетического оружия: <bonWEnergy> ед.
+        Text=Сила осколочного оружия: <bonWSplinter> ед.
+        Text=Сила ракетного оружия: <bonWMissile> ед.
+        Text=Дальность стрельбы: <bonWRadius> ед.
+        Text=Навык манёвренности: <bonSkill2>
+        Text=Навык торговли: <bonSkill4>
+        Text=Навык обаяния: <bonSkill5>
+        bonSkill1=1
+        bonSkill2=1
+        bonSkill4=-1
+        bonSkill5=-1
+        bonSlotArt=-2
+        bonSlotForsage=-1
+        bonSlotScaner=-1
+        bonWRadius=5
+        bonWEnergy=10
+        bonWMissile=10
+        bonWSplinter=10
+    }
+    ExpHulls_Killer2 ^{
+        Cost=300
+        Equipments=Hull
+        Fragility=100
+        KindGraph=1
+        LockedAcryn=3
+        Name=Корпус "Убийца" II
+        NonSearchable=1
+        Priority=30
+        Size=100
+        Special=1
+        Text=Навык точности: <bonSkill1>
+        Text=Сила энергетического оружия: <bonWEnergy> ед.
+        Text=Сила осколочного оружия: <bonWSplinter> ед.
+        Text=Сила ракетного оружия: <bonWMissile> ед.
+        Text=Дальность стрельбы: <bonWRadius> ед.
+        Text=Навык манёвренности: <bonSkill2>
+        Text=Навык торговли: <bonSkill4>
+        Text=Навык обаяния: <bonSkill5>
+        bonSkill1=1
+        bonSkill2=1
+        bonSkill4=-1
+        bonSkill5=-1
+        bonSlotArt=-2
+        bonSlotForsage=-1
+        bonSlotScaner=-1
+        bonWRadius=15
+        bonWEnergy=14
+        bonWMissile=14
+        bonWSplinter=14
+    }
+    ExpHulls_Killer3 ^{
+        Cost=400
+        Equipments=Hull
+        Fragility=100
+        KindGraph=1
+        LockedAcryn=3
+        Name=Корпус "Убийца" III
+        NonSearchable=1
+        Priority=50
+        Size=100
+        Special=1
+        Text=Навык точности: <bonSkill1>
+        Text=Сила энергетического оружия: <bonWEnergy> ед.
+        Text=Сила осколочного оружия: <bonWSplinter> ед.
+        Text=Сила ракетного оружия: <bonWMissile> ед.
+        Text=Дальность стрельбы: <bonWRadius> ед.
+        Text=Навык манёвренности: <bonSkill2>
+        Text=Навык торговли: <bonSkill4>
+        Text=Навык обаяния: <bonSkill5>
+        bonSkill1=1
+        bonSkill2=-1
+        bonSkill4=-1
+        bonSkill5=-1
+        bonSlotArt=-2
+        bonSlotForsage=-1
+        bonSlotScaner=-1
+        bonWRadius=25
+        bonWEnergy=18
+        bonWMissile=18
+        bonWSplinter=18
+    }
+    ExpHulls_Killer4 ^{
+        Cost=500
+        Equipments=Hull
+        Fragility=100
+        KindGraph=1
+        LockedAcryn=3
+        Name=Корпус "Убийца" IV
+        NonSearchable=1
+        Priority=70
+        Size=100
+        Special=1
+        Text=Навык точности: <bonSkill1>
+        Text=Сила энергетического оружия: <bonWEnergy> ед.
+        Text=Сила осколочного оружия: <bonWSplinter> ед.
+        Text=Сила ракетного оружия: <bonWMissile> ед.
+        Text=Дальность стрельбы: <bonWRadius> ед.
+        Text=Навык манёвренности: <bonSkill2>
+        Text=Навык торговли: <bonSkill4>
+        Text=Навык обаяния: <bonSkill5>
+        bonSkill1=1
+        bonSkill2=1
+        bonSkill4=-1
+        bonSkill5=-1
+        bonWRadius=35
+        bonWEnergy=24
+        bonWMissile=24
+        bonWSplinter=24
+    }
+    ExpHulls_Killer5 ^{
+        Cost=600
+        Equipments=Hull
+        Fragility=100
+        KindGraph=1
+        LockedAcryn=3
+        Name=Корпус "Палач"
+        NonSearchable=1
+        Priority=100
+        Size=100
+        Special=1
+        Text=Навык точности: <bonSkill1>
+        Text=Сила энергетического оружия: <bonWEnergy> ед.
+        Text=Сила осколочного оружия: <bonWSplinter> ед.
+        Text=Сила ракетного оружия: <bonWMissile> ед.
+		Text=Мощность ГЗП: +<bonDef>%
+        Text=Дальность стрельбы: <bonWRadius> ед.
+        Text=Навык манёвренности: <bonSkill2>
+        bonSkill1=2
+        bonSkill2=2
+		bonDef=5
+        bonWRadius=100
+        bonWEnergy=40
+        bonWMissile=40
+        bonWSplinter=40
+    }
+    ExpHulls_Rock1 ^{
+        Cost=200
+        Equipments=Hull
+        Fragility=90
+        KindGraph=2
+        LockedAcryn=3
+        Name=Корпус "Скала" I
+        NonSearchable=1
+        Priority=10
+        Size=100
+        Special=1
+        Text=Навык манёвренности: <bonSkill2>
+        Text=Навык техники: <bonSkill3>
+        Text=Броня корпуса: <bonHull> ед.
+        Text=Эффективность дроида: <bonDroid> ед.
+        Text=Навык торговли: <bonSkill4>
+        Text=Навык обаяния: <bonSkill5>
+        Text=Скорость двигателя: <bonSpeed> ед.
+        bonDroid=20
+        bonHull=3
+        bonSkill2=1
+        bonSkill3=1
+        bonSkill4=-2
+        bonSkill5=-1
+        bonSlotForsage=-1
+        bonSlotWeapon=-2
+        bonSpeed=-70
+    }
+    ExpHulls_Rock2 ^{
+        Cost=300
+        Equipments=Hull
+        Fragility=85
+        KindGraph=2
+        LockedAcryn=3
+        Name=Корпус "Скала" II
+        NonSearchable=1
+        Priority=30
+        Size=100
+        Special=1
+        Text=Навык манёвренности: <bonSkill2>
+        Text=Навык техники: <bonSkill3>
+        Text=Броня корпуса: <bonHull> ед.
+        Text=Эффективность дроида: <bonDroid> ед.
+        Text=Навык торговли: <bonSkill4>
+        Text=Навык обаяния: <bonSkill5>
+        Text=Скорость двигателя: <bonSpeed> ед.
+        Text=Мощность сканера: <bonScan> ед.
+        bonDroid=25
+        bonHull=7
+        bonSkill2=1
+        bonSkill3=1
+        bonSpeed=-90
+    }
+    ExpHulls_Rock3 ^{
+        Cost=400
+        Equipments=Hull
+        Fragility=80
+        KindGraph=2
+        LockedAcryn=3
+        Name=Корпус "Скала" III
+        NonSearchable=1
+        Priority=50
+        Size=100
+        Special=1
+        Text=Навык манёвренности: <bonSkill2>
+        Text=Броня корпуса: <bonHull> ед.
+        Text=Эффективность дроида: <bonDroid> ед.
+        Text=Скорость двигателя: <bonSpeed> ед.
+        bonDroid=40
+        bonHull=10
+        bonSkill2=1
+        bonSkill3=1
+        bonSpeed=-110
+    }
+    ExpHulls_Rock4 ^{
+        Cost=500
+        Equipments=Hull
+        Fragility=75
+        KindGraph=2
+        LockedAcryn=3
+        Name=Корпус "Скала" IV
+        NonSearchable=1
+        Priority=70
+        Size=100
+        Special=1
+        Text=Навык манёвренности: <bonSkill2>
+        Text=Броня корпуса: <bonHull> ед.
+        Text=Эффективность дроида: <bonDroid> ед.
+        bonDroid=55
+        bonHull=12
+		bonDef=15
+        bonSkill2=1
+        bonSkill3=1
+        bonSpeed=-140
+    }
+    ExpHulls_Rock5 ^{
+        Cost=600
+        Equipments=Hull
+        Fragility=60
+        KindGraph=2
+        LockedAcryn=3
+        Name=Корпус "Бастион"
+        NonSearchable=1
+        Priority=100
+        Size=100
+        Special=1
+        Text=Навык манёвренности: <bonSkill2>
+        Text=Броня корпуса: <bonHull> ед.
+        Text=Эффективность дроида: <bonDroid> ед.
+        Text=Скорость двигателя: <bonSpeed> ед.
+		Text=Мощность ГЗП: +<bonDef>%
+        bonDroid=70
+		bonDef=5
+        bonHull=18
+        bonSkill2=2
+        bonSkill3=2
+        bonSpeed=-300
+    }
+    ExpScienceRanks_TickAttackMode ^{
+        Cost=100
+        CustomTag=ExpScienceRanks_TickAttackMode
+        Equipments=Hull
+		FragilityEnergy=60
+        FragilityMissile=60
+        FragilitySplinter=60
+        KindGraph=MA
+        LockedAcryn=3
+        Name=Клещ: боевой режим
+        NonSearchable=1
+        Priority=50
+        Size=170
+        Special=1
+        Text=<color=248,252,248>Как только люди, во время галактической конференции по изучению черных дыр увидели прототип этого корпуса, сразу окрестили его "Клещ". Название мгновенно закрепилось за корпусом</color>
+        Text=<color=248,252,248>Единственный минус этого почти идеального корабля-трансформера то, что ключевые отверстия корпуса находятся слишком близко. Таким образом:</color>
+        Text=<color=248,252,248>В режиме</color> атаки <color=248,252,248>листовые пластины брони сдвигаются назад от орудийного отсека, частично перекрывая выходные сопла двигателя, за счет чего происходит небольшое снижение его мощности, но при этом увеличиваются наносимые повреждения.</color>
+        Text=<clr><clrEnd>
+        Text=Сила энергетического оружия: <bonWEnergy> ед.
+        Text=Сила осколочного оружия: <bonWSplinter> ед.
+        Text=Сила ракетного оружия: <bonWMissile> ед.
+        Text=Дальность стрельбы: <bonWRadius> ед.
+		Text=Мощность ГЗП: +<bonDef>%
+        bonWEnergy=30
+        bonWMissile=30
+        bonWRadius=100
+        bonWSplinter=30
+		bonDef=5
+    }
+    ExpScienceRanks_TickDefenseMode ^{
+        Cost=100
+        CustomTag=ExpScienceRanks_TickDefenseMode
+        Equipments=Hull
+        FragilityEnergy=40
+        FragilityMissile=40
+        FragilitySplinter=40
+        KindGraph=MD
+        LockedAcryn=3
+        Name=Клещ: защитный режим
+        NonSearchable=1
+        Priority=50
+        Size=170
+        Special=1
+        Text=<color=248,252,248>Как только люди, во время галактической конференции по изучению черных дыр увидели прототип этого корпуса, сразу окрестили его "Клещ". Название мгновенно закрепилось за корпусом</color>
+        Text=<color=248,252,248>Единственный минус этого почти идеального корабля-трансформера то, что ключевые отверстия корпуса находятся слишком близко. Таким образом:</color>
+        Text=<color=248,252,248>В режиме</color> защиты <color=248,252,248>бронепластины сдвигаются вперед, сужая орудийные амбразуры, что сильно затрудняет работу системы наведения, которая уже не способна эффективно находить уязвимости противника, что существенно снижает наносимый урон и немного дальность стрельбы, при этом увеличивая защиту</color>
+        Text=<clr><clrEnd>
+        Text=Броня корпуса: <bonHull> ед.
+        Text=Эффективность дроида: <bonDroid> ед.
+		Text=Мощность ГЗП: +<bonDef>%
+		Text=Сила энергетического оружия: <bonWEnergy> ед.
+        Text=Сила осколочного оружия: <bonWSplinter> ед.
+        Text=Сила ракетного оружия: <bonWMissile> ед.
+        bonDroid=60
+        bonHull=15
+		bonDef=20
+		bonWEnergy=-40
+        bonWMissile=-40
+        bonWSplinter=-30
+    }
+    ExpScienceRanks_TickSpeedMode ^{
+        Cost=100
+        CustomTag=ExpScienceRanks_TickSpeedMode
+        Equipments=Hull
+        FragilityEnergy=105
+        FragilityMissile=105
+        FragilitySplinter=105
+        KindGraph=MG
+        LockedAcryn=3
+        Name=Клещ: скоростной режим
+        NonSearchable=1
+        Priority=50
+        Size=170
+        Special=1
+        Text=<color=248,252,248>Как только люди, во время галактической конференции по изучению черных дыр увидели прототип этого корпуса, сразу окрестили его "Клещ". Название мгновенно закрепилось за корпусом</color>
+        Text=<color=248,252,248>Единственный минус этого почти идеального корабля-трансформера то, что ключевые отверстия корпуса находятся слишком близко. Таким образом:</color>
+        Text=<color=248,252,248>В </color>гибридном <color=248,252,248>режиме бронепластины раздвигаются немного в стороны, что позволяет увеличить скорость двигателя без ущерба работе системы наведения орудий, но при этом увеличивается получаемый урон.</color>
+        Text=<clr><clrEnd>
+        Text=Скорость двигателя: <bonSpeed> ед.
+        Text=Дальность прыжка: <bonJump> пк.
+        bonJump=20
+        bonSpeed=300
+    }
+	EvoMMUnique_Demplifier ^{
+        Cost=180
+        Equipments=WEnergy,WSplinter
+        Fragility=50
+        KindGraph=Un
+        Name=Разрушитель
+        Owner=Maloc,Peleng,People,Fei,Gaal,NonKling,PirateClan,None
+        Priority=0
+        Size=70
+        Special=1
+		LockedAcryn=3
+        Text=Уникальный микромодуль. Небольшой реактор холодного синтеза, установленный в оружие, при активации переводит давление из камер синтеза в стволы оружия, увеличивая их огневую мощь, в то же время избыточная энергия синтеза повышает эффективность выстрела. Совместим со <clr>всеми расами<clrEnd>.
+        Text=Дополнительный эффект: <clr>ионизация цели<clrEnd>
+		Text=Сила энергетического оружия: <bonWEnergy> ед.
+        Text=Сила осколочного оружия: <bonWSplinter> ед.
+        Text=Дальность стрельбы: <bonWRadius> ед.
+        Text=Надежность: <clr>+50%<clrEnd>
+        Text=Размер: <clr>-30%<clrEnd>
+        Text=Стоимость: <clr>+80%<clrEnd>
+        bonWEnergy=35
+        bonWRadius=100
+        bonWSplinter=40
+		WeaponMods=Shock
+    }
+    EvoMMUnique_Droiser ^{
+        Cost=300
+        Equipments=Droid,DefGenerator
+        Fragility=50
+        KindGraph=Un
+        Name=Дроизатор
+        Owner=Maloc,Peleng,People,Fei,Gaal,NonKling,PirateClan,None
+        Priority=0
+        Size=90
+        Special=1
+		LockedAcryn=3
+        Text=Уникальный микромодуль. Мощнейший модифицирующий блок, разработанный для глобального улучшения характеристик ремонтного дроида. Тотально модернизируя все основные и второстепенные ключи и механизмы работы дроида, чрезвычайно сильно увеличивает эффективность дроида. В ходе разработки микромодуля было выявлено достаточно значительное увеличение и генератора защитного поля при активации микромодуля. Совместим со <clr>всеми расами<clrEnd>.
+        Text=Эффективность дроида: <bonDroid> ед.
+        Text=Генератор поля: <bonDef> %
+        Text=Надежность: <clr>+50%<clrEnd>
+        Text=Размер: <clr>-10%<clrEnd>
+        Text=Стоимость: <clr>+200%<clrEnd>
+        bonDef=18
+        bonDroid=65
+    }
+    EvoMMUnique_Enricher ^{
+        Cost=40
+        Equipments=Engine,FuelTank
+        Fragility=50
+        KindGraph=Un
+        Name=Обогащатель
+        Owner=Maloc,Peleng,People,Fei,Gaal,NonKling,PirateClan,None
+        Priority=0
+        Size=50
+        Special=1
+		LockedAcryn=3
+        Text=Уникальный микромодуль. Просто создан для скорейшего обогащения. Совместим со <clr>всеми расами<clrEnd>.
+        Text=Скорость двигателя: <bonSpeed> ед.
+        Text=Дальность прыжка: <bonJump> ед.
+        Text=Объем бака: <bonFuel> ед.
+        Text=Надежность: <clr>+50%<clrEnd>
+        Text=Размер: <clr>-50%<clrEnd>
+        Text=Стоимость: <clr>-60%<clrEnd>
+        bonFuel=280
+        bonJump=20
+        bonSpeed=300
+    }
+    EvoMMUnique_Relicter ^{
+        Cost=350
+        Equipments=WMissile
+        Fragility=20
+        KindGraph=Un
+        Name=Реликтер
+        Owner=Maloc,Peleng,People,Fei,Gaal,NonKling,PirateClan,None
+        Priority=0
+        Size=250
+        Special=1
+		LockedAcryn=3
+        Text=Уникальный микромодуль. Реликтовое излучение, образующееся в гипер-пространстве, образует физические процессы, происходящие внутри гипер-пузырей, исследования которых позволили снизить массу ракетных боеголовок, тем самым увеличив их мощность. Совместим со <clr>всеми расами<clrEnd>.
+        Text=Сила ракетного оружия: <bonWMissile> ед.
+        Text=Скорость ракет и торпед: <bonMissileSpeed> ед.
+        Text=Количество залпов: <bonAmmo> ед.
+		Text=Количество выстрелов: <bonAttacks> ед.
+        Text=Надежность: <clr>+80%<clrEnd>
+        Text=Размер: <clr>+150%<clrEnd>
+        Text=Стоимость: <clr>+250%<clrEnd>
+        bonAmmo=80
+		bonAttacks=2
+        bonMissileSpeed=1200
+        bonWMissile=40
+    }
+    EvoMMUnique_Rediarcher ^{
+        Cost=140
+        Equipments=Scaner,Radar,Hook
+		Fragility=200
+        KindGraph=Un
+        Name=Исследователь
+        Owner=Maloc,Peleng,People,Fei,Gaal,NonKling,PirateClan,None
+        Priority=0
+        Size=300
+        Special=1
+		LockedAcryn=3
+        Text=Уникальный микромодуль. Огромный засекреченный архив исследований Коалиции, глубоко спрятанный на секретных складах отдаленных планет. Совместим со <clr>всеми расами<clrEnd>.
+        Text=Мощность сканера: <bonScan> ед.
+        Text=Дальность радара: <bonRadar> ед.
+        Text=Мощность захвата: <bonHook> ед.
+        Text=Дальность захвата: <bonHookRadius> ед.
+        Text=Скорость притягивания на ближней дистанции: <bonHookMinSpeed> ед.
+        Text=Скорость притягивания на дальней дистанции: <bonHookMaxSpeed> ед.
+        Text=Надежность: <clr>+25%<clrEnd>
+        Text=Размер: <clr>-10%<clrEnd>
+        Text=Стоимость: <clr>+40%<clrEnd>
+        bonHook=250
+        bonHookMaxSpeed=10
+        bonHookMinSpeed=10
+        bonHookRadius=350
+        bonRadar=2000
+        bonScan=25
+    }
+    EvoMMUnique_Structurizer ^{
+        Cost=340
+        Equipments=Hull
+        KindGraph=Un
+        Name=Структуризатор
+        Owner=Maloc,Peleng,People,Fei,Gaal,NonKling,PirateClan,None
+        Priority=0
+        Special=1
+		LockedAcryn=3
+		Size=200
+        Text=Уникальный микромодуль. Содержит наноматериалы углеродоволокна с вкраплениями биофотонов. Совместим со <clr>всеми расами<clrEnd>.
+        Text=Броня корпуса: <bonHull> ед.
+        Text=Масса корабля: <clr>-60%<clrEnd>
+		Text=Размер корабля: <clr>+100%<clrEnd>
+        Text=Стоимость: <clr>+240%<clrEnd>
+        Text=Открывает 4 слота для <clr>артефакта<clrEnd>.
+        Text=Открывает 1 слот для <clr>генератора защиты<clrEnd>.
+        Text=Открывает 1 слот для <clr>дроида<clrEnd>.
+        Text=Открывает 1 слот для <clr>форсажа<clrEnd>.
+        Text=Открывает 1 слот для <clr>захвата<clrEnd>.
+        Text=Открывает 1 слот для <clr>радара<clrEnd>.
+        Text=Открывает 1 слот для <clr>сканера<clrEnd>.
+        Text=Открывает 4 слота для <clr>оружия<clrEnd>.
+        bonHull=12
+        bonMass=-60
+        bonSlotArt=4
+        bonSlotDef=1
+        bonSlotDroid=1
+        bonSlotForsage=1
+        bonSlotHook=1
+        bonSlotRadar=1
+        bonSlotScaner=1
+        bonSlotWeapon=4
+    }
+    498 ^{
+        Cost=300
+        CustomTag=AkrinAmplifier
+        Equipments=FuelTank,Engine,Radar,Scaner,Droid,Hook,DefGenerator
+        Name=Акринатор
+        Priority=0
+        Size=600
+        Special=1
+        Text=Уникальный микромодуль первого уровня, ручной работы. Новейшая экспериментальная разработка техников Коалиции в области акриновых технологий, создана в единственном экземпляре. Увеличивает все особые эффекты <clr>акринового<clrEnd> оборудования в шесть раз и нейтрализует все его негативные эффекты. Размер и стоимость оборудования при этом увеличиваются в четыре раза. Из-за конфликта устаревших разъемов невозможна его установка на корпус.
+        Text=Размер: <clr>+600%<clrEnd>
+        Text=Стоимость: <clr>+200%<clrEnd>
+        bonExtraAkrinEff=600
+        bonExtraAkrinPenalty=-100
+    }
+	LEOContentMod_Umojan ^{
+        BlockMM=1
+        Cost=100
+        CustomTag=Umojan
+        Equipments=Hull
+        FragilityEnergy=80
+        FragilityMissile=80
+        FragilitySplinter=80
+        HullGraphSize=230
+        KindGraph=Umojan
+        LockedAcryn=3
+        Name=<color=49,239,255>Баттлкрузер</color>
+        BlockImp=1
+        Owner=People
+        Priority=50
+        Size=100
+        Special=1
+        Text=<color=248,252,248>Первые крейсеры появились еще на рассвете Конфедерации и успели поучаствовать почти в каждой войне, прогремевшей в секторе Копрулу. Впрочем, со временем их функции несколько изменились: теперь крейсера уже не имеют столь неоспоримого преимущества в воздухе и в основном используются в качестве мобильных баз, способных перевозить огромное количество техники и персонала, а также совершать космические прыжки и обеспечивать безопасность экипажа даже в самых неблагоприятных условиях среды. <br> Производство столь массивного корпуса изначально сопряжено с множеством проблем, которые легко решаются применением технологий арксов. Их кристаллы, будучи подключёнными к энергосистемам корпуса, используют часть энергии на создание гравитационных аномалий, позволяющих даже стандартным двигателям сдвигать его с места. Оставшуюся энергию кристаллы хранят в себе, при необходимости автономно направляя её на поддержку важных систем, созданных с применением технологий арксов. Такое управление энергией позволяет поддерживать в рабочем состоянии корпус гораздо больших размеров, чем обычно.</color>
+        Text=Эффективность дроида: <bonDroid> ед.
+        Text=Броня корпуса: <bonHull> ед.
+        Text=Дальность прыжка: <bonJump> ед.
+        Text=Мощность ГЗП: <bonDef> ед.
+        bonDef=-100
+        bonDroid=60
+        bonHull=40
+        bonJump=15
+        bonSlotWeapon=-2
+        bonSpeed=0
+		bonSlotForsage=1
+    }
+	LEOContentMod_BattleDroid_3 ^{
+		AcrynSerie=Боевой дроид
+		BlockMM=0
+		Cost=600
+		Equipments=Droid
+		Fragility=70
+		KindGraph=BATTLE_DRD
+		LevelsCount=3
+		LockedAcryn=1
+		Name=Боевой дроид III
+		OnPlanets=0
+		Owner=Maloc,Peleng,People,Fei,Gaal,PirateClan
+		Priority=50
+		Ruins=Any
+		SerieLevel1=LEOContentMod_BattleDroid_1
+		SerieLevel2=LEOContentMod_BattleDroid_2
+		SerieLevel3=LEOContentMod_BattleDroid_3
+		Size=100
+		Special=1
+		Text=<color=248,252,248>Восстановленная по старым схемам акриновая модификация дроида, идеальная для продолжительных боевых действий. Прочные и эффективные узлы данного ремонтного робота обеспечивают максимальный коэффициент полезного действия любых орудий в ущерб всем остальным видам оборудования. Повышенная Надежность гарантирует увеличенный срок эксплуатации орудийных палуб в бою, а заодно и жизненно важных органов пилота.</color>
+		Text=<clr><clrEnd>
+		Text=Сила энергетического оружия: <bonWEnergy> ед.
+        Text=Сила осколочного оружия: <bonWSplinter> ед.
+        Text=Сила ракетного оружия: <bonWMissile> ед.
+		Text=Дальность стрельбы: <bonWRadius> ед.
+		Text=Скорость двигателя: <bonSpeed> ед.
+		bonSpeed=-80
+		bonWEnergy=27
+		bonWMissile=27
+		bonWRadius=80
+		bonWSplinter=27
+	}
+	RevAcryn_Ubivator7 ^{
+		bonWEnergy=30
+		bonWSplinter=40
+	}
+	RevAcryn_Ubivator8 ^{
+		bonWEnergy=45
+		bonWSplinter=55
+	}
+	RevAcryn_NOKM ^{
+        BlockImp=1
+        BlockMM=0
+        Cost=350
+        CustomTag=RevAcryn_NOKM
+        Equipments=Engine
+        Fragility=20
+        KindGraph=NOKM
+        LockedAcryn=3
+        Name=</color>НОКМ-3314М
+        NonSearchable=2
+        Owner=Maloc
+        Priority=10
+        Size=100
+        Special=1
+        Text=<color=248,252,248>Результатом данного проекта стал тяжеленный и очень дорогой агрегат, который в автоматическом режиме создаёт портативные ядерные боеголовки из обычного звездолётного топлива и наноклея из резервуаров дроида, устанавливая получившиеся снаряды в боеголовки обычных ракет и торпед. Ну а поскольку в <color=255,240,100>Уставе</color> красным по жёлтому сказано, что топливовод у корабля должен быть всего один, агрегат спроектирован так, чтобы его можно было устанавливать только <color=255,240,100>вместо двигателя</color>, со<br>всеми вытекающими отсюда последствиями.</color>
+        Text=<clr><clrEnd>
+        Text=Сила ракетного оружия: <bonWMissile> ед.
+        TextReplace=<color=248,252,248>Причиной создания этого странного агрегата стал дипломатический инцидент, в ходе которого посол <color=255,240,100>Земли</color> пригрозил послу <color=255,240,100>Рамгатру</color> "показать Кузькину мать". А на <color=255,240,100>Рамгатру</color>, долго не раздумывая, решили, что эта самая "Кузькина мать" есть некое абсолютное оружие, в связи с чем был срочно развёрнут проект <color=255,240,100>"Наш ответ Кузькиной матери"</color>.</color>
+        bonJump=-500000000
+        bonWMissile=80
+    }
+	ShuDomiks_KellerJavelin ^{
+		BlockImp=1
+		BlockMM=1
+		Cost=400
+		Equipments=W15
+		Fragility=100
+		KindGraph=overheat
+		LockedAcryn=3
+		Name=<color=60,182,230>Жавелин</color><color=248,252,248>
+		NonSearchable=1
+		Owner=Kling
+		Priority=0
+		ShotVisual=3
+		Size=200
+		Special=1
+		Text=<color=248,252,248>Легендарный торпедный аппарат <clr>Келлера<clrEnd>, поэтически называемый учёными <color=60,182,230>"Жавелин"</color><color=248,252,248>. Обладая чудовищной скорострельностью, аппарат выпускает три стремительные ионизирующие торпеды, не оставляя противнику никаких шансов уклониться от столь нежеланного "подарка". Кроме того, возросший расход торпед с лихвой компенсируется огромным боезапасом, позволяя владельцу вести непрерывный обстрел до победного конца.</color>
+		Text=<clr><clrEnd>
+		Text=Скорострельность: <bonAttacks>
+		Text=Дополнительный боезапас: <clr>500<clrEnd> ед.
+		Text=Дополнительный урон: <clr>100<clrEnd> ед.
+		Text=Скорость торпед: <clr>500<clrEnd> ед.
+		Text=Дополнительный эффект: <clr>ионизация<clrEnd>
+		Text=Навык лидерства: <bonSkill6> ед.
+		Text=Навык обаяния: <bonSkill5> ед.
+		WeaponMods=Destruct,Shock
+		bonAttacks=3
+		bonWMissile=120
+		bonAmmo=500
+		bonMissileSpeed=500
+		bonSkill5=2
+		bonSkill6=2
+	}
+	ShuDomiks_BlazerMassacre ^{
+		BlockImp=1
+		BlockMM=0
+		Cost=800
+		Equipments=W12
+		Fragility=0
+		KindGraph=dmg
+		LockedAcryn=3
+		Name=</color><color=255,25,25>Массакри</color><color=248,252,248>
+		NonSearchable=1
+		Owner=Kling
+		Priority=0
+		ShotVisual=3
+		Size=150
+		Special=1
+		Text=<color=248,252,248>Легендарный турбогравир <clr>Блазера<clrEnd>, окрещённый исследователями не иначе как </color><color=255,25,25>"Массакри"</color><color=248,252,248>. Является голубой мечтой любого воина или коллекционера и представляет собой оружие ужасающей силы, способное в считанные секунды аннигилировать даже самого грозного врага. Ходит слух, что помимо своей колоссальной мощи, данный экземпляр получает энергию из неограниченного источника, а потому способен работать практически вечно, но проверить это на деле до сих пор не удавалось ещё никому.</color>
+		Text=<clr><clrEnd>
+		Text=Дополнительный эффект: <clr>замедление<clrEnd>
+		Text=Навык лидерства: <bonSkill6> ед.
+		Text=Навык обаяния: <bonSkill5> ед.
+		Text=Мощность ГЗП: <bonDef> ед.
+		Text=Скорострельность: <clr>+5<clrEnd>
+		Text=Дополнительный урон: <clr>200<clrEnd> ед.
+		bonWEnergy=200
+		bonAttacks=6
+		WeaponMods=Decelerate,DecelerateA,NoDelta
+		bonSkill5=3
+		bonSkill6=4
+		bonDef=10
+	}
+	ShuDomiks_TerronRailgun ^{
+		BlockImp=1
+		BlockMM=0
+		Cost=400
+		Equipments=W11
+		Fragility=71
+		KindGraph=block
+		LockedAcryn=3
+		Name=</color><color=156,240,10>Рейлган</color><color=248,252,248>
+		NonSearchable=1
+		Owner=Kling
+		Priority=0
+		ShotVisual=266
+		Size=150
+		Special=1
+		Text=<color=248,252,248>Легендарный дезинтегратор <clr>Террона<clrEnd>, получивший в среде борцов с доминаторами прозвище </color><color=156,240,10>"Рейлган"</color><color=248,252,248>. Это ужасающее орудие уже давно стало ночным кошмаром всех гралгарских охотников за ошмётками. Благодаря феноменальной точности и умопомрачительной дальности, владелец способен быстро и эффективно испепелять даже самые тяжелобронированные цели, сохраняя при этом безопасную дистанцию.</color>
+		Text=<clr><clrEnd>
+		Text=Навык лидерства: <bonSkill6>
+		Text=Навык обаяния: <bonSkill5>
+		Text=Дополнительный урон: <clr>100<clrEnd> ед.
+		Text=Дополнительная дальность стрельбы: <clr>800<clrEnd> ед.
+		Text=<clr>(Полностью игнорирует любую защиту цели)<clrEnd>
+		WeaponMods=Undefendable,NoDelta
+		bonWRadius=800
+		bonWEnergy=100
+		bonSkill5=2
+		bonSkill6=2
+	}
+}
+Items ^{
+    CargoHook ^{
+        mMass=35,45,55,75,100,150,300,600
+		mRadius=70,100,125,150,175,200,250,400
+        mSpeedClose=3,4,4,5,6,8,10,20
+        mSpeedFar=1,1,2,3,6,8,10,20
+	}
+    DefGenerator ^{
+        mDef=0.05,0.10,0.15, 0.20, 0.25, 0.30, 0.35, 0.40
+	}
+	Engine ^{
+	    mJump=12,16,20,24,28,36,44,52
+        mSpeed=300,350,400,450,500,700,900,1100
+	}
+	FuelTanks ^{
+        mCapacity=30,40,50,60,70,90,110,140
+	}	
+	Hull ^{
+        mAlloy=2,3,5,7,9,12,16,19
+	    mFragilityByLevelEnergy=1.00, 1.00, 1.00, 1.05, 1.10, 1.00, 0.95, 0.85
+        mFragilityByLevelMissile=1.05, 1.10, 1.00, 0.95, 0.90, 1.00, 1.05, 1.10
+        mFragilityByLevelSplinter=0.95, 0.90, 1.00, 1.00, 1.00, 1.00, 1.00, 1.05
+        mFragilityByOwnerEnergy=1.05, 1.05, 1.10, 0.90, 0.95, 1.00, 1.00, 0.95
+        mFragilityByOwnerMissile=0.90, 1.05, 0.95, 1.05, 1.10, 1.00, 1.00, 0.95
+        mFragilityByOwnerSplinter=1.05, 0.90, 0.95, 1.05, 0.95, 1.00, 1.00, 1.10
+        mFragilityByShipType=1.0, 0.9, 1.1, 1.2, 1.1, 1.0, 1.0, 1.0, 0.9, 1.0, 0.9
+	}
+	Radar ^{
+        mRadius=500,800,1200,1700,2300,2700,3400,4200
+	}
+    RepairRobot ^{
+        mRepair=5,8,12,17,23,30,50,82
+	}
+    Weapon ^{
+        Stats ^{
+			1 ^{
+				AverageRadius=0330
+				AverageSize=025
+				DamageSet=Energy
+				MaxDamage=018
+				MinDamage=012
+				MiningFactor=1
+				ShotType=Normal
+				Speed=065
+				TechLevel=01
+				kCost=01.5
+				mWeaponDamage=1.00,1.10,1.20,1.30,1.60,2.00,2.70,4.00
+			}
+			10 ^{
+				AverageRadius=0320
+				AverageSize=080
+				DamageSet=Energy
+				MaxDamage=045
+				MinDamage=030
+				MiningFactor=6
+				SecondaryDamageRadius=100
+				ShotType=Splash
+				Speed=055
+				TechLevel=07
+				kCost=25.0
+				mWeaponDamage=1.00,1.10,1.15,1.20,1.25,1.30,1.35,1.40
+			}
+			11 ^{
+				AverageRadius=0420
+				AverageSize=090
+				DamageSet=Energy
+				MaxDamage=055
+				MinDamage=035
+				MiningFactor=1
+				ShotType=Normal
+				Speed=095
+				TechLevel=07
+				kCost=50.0
+				mWeaponDamage=1.00,1.10,1.20,1.30,1.40,1.50,1.60,1.70
+			}
+			12 ^{
+				AverageRadius=0320
+				AverageSize=100
+				DamageSet=Energy
+				MaxDamage=060
+				MinDamage=040
+				MiningFactor=2
+				SecondaryDamageRadius=200
+				ShotType=Exploder
+				Speed=100
+				TechLevel=08
+				kCost=70.0
+				mWeaponDamage=1.00,1.10,1.15,1.20,1.25,1.30,1.35,1.40
+			}
+			13 ^{
+				AverageRadius=0300
+				AverageSize=080
+				DamageSet=Splinter,Destruct
+				MaxDamage=030
+				MinDamage=020
+				MiningFactor=6
+				ShotType=AreaDamage
+				Speed=040
+				TechLevel=09
+				kCost=75.0
+				mWeaponDamage=1.00,1.10,1.25,1.40,1.80,2.20,2.60,3.00
+			}
+			14 ^{
+				AverageRadius=0330
+				AverageSize=110
+				DamageSet=Energy
+				MaxDamage=040
+				MinDamage=018
+				MiningFactor=6
+				ShotType=AreaDamage
+				Speed=045
+				TechLevel=09
+				kCost=90.0
+				mWeaponDamage=1.00,1.10,1.25,1.40,1.80,2.20,2.60,3.00
+			}
+			15 ^{
+				AverageRadius=0800
+				AverageSize=060
+				DamageSet=Missile
+				MaxDamage=030
+				MinDamage=025
+				MiningFactor=6
+				MissileChanceToBeHit=33
+				MissileMaxSpeed=1000
+				MissileMinSpeed=600
+				MissileRadius=1200
+				SecondaryDamageRadius=100
+				ShotType=Torpedo
+				Speed=005
+				TechLevel=08
+				kCost=52.5
+				mWeaponDamage=1.00,1.20,1.40,1.70,2.00,2.40,2.80,3.20
+			}
+			16 ^{
+				AverageRadius=0330
+				AverageSize=035
+				DamageSet=Splinter,Acid,NoDelta
+				MaxDamage=045
+				MinDamage=035
+				MiningFactor=5
+				ShotType=Normal
+				Speed=050
+				TechLevel=05
+				kCost=30.0
+				mWeaponDamage=1.00,1.10,1.15,1.20,1.25,1.35,1.55,1.70
+			}
+			17 ^{
+				AverageRadius=0350
+				AverageSize=050
+				DamageSet=Energy,Shock
+				MaxDamage=050
+				MinDamage=001
+				MiningFactor=1
+				ShotType=Normal
+				Speed=070
+				TechLevel=03
+				kCost=07.5
+				mWeaponDamage=1.00,1.10,1.15,1.20,1.25,1.50,2.00,2.50
+			}
+			18 ^{
+				AverageRadius=0300
+				AverageSize=030
+				DamageSet=Missile,Magnetic
+				MaxDamage=008
+				MinDamage=006
+				MiningFactor=6
+				MissileChanceToBeHit=80
+				MissileMaxSpeed=1600
+				MissileMinSpeed=800
+				MissileRadius=600
+				ShotType=Rocket5
+				Speed=000
+				TechLevel=05
+				kCost=20.0
+				mWeaponDamage=1.00,1.05,1.10,1.20,1.30,1.45,1.60,1.80
+			}
+			2 ^{
+				AverageRadius=0240
+				AverageSize=040
+				DamageSet=Splinter
+				MaxDamage=025
+				MinDamage=015
+				MiningFactor=5
+				ShotType=Normal
+				Speed=060
+				TechLevel=02
+				kCost=02.5
+				mWeaponDamage=1.00,1.20,1.40,1.60,1.80,2.00,2.20,2.40
+			}
+			3 ^{
+				AverageRadius=0350
+				AverageSize=050
+				DamageSet=Energy
+				MaxDamage=030
+				MinDamage=012
+				MiningFactor=4
+				ShotType=Normal
+				Speed=080
+				TechLevel=03
+				kCost=03.5
+				mWeaponDamage=1.00,1.10,1.15,1.20,1.25,1.70,2.50,3.00
+			}
+			4 ^{
+				AverageRadius=0600
+				AverageSize=020
+				DamageSet=Missile
+				MaxDamage=023
+				MinDamage=018
+				MiningFactor=6
+				MissileChanceToBeHit=50
+				MissileMaxSpeed=1500
+				MissileMinSpeed=900
+				MissileRadius=1500
+				ShotType=Rocket3
+				Speed=000
+				TechLevel=04
+				kCost=04.0
+				mWeaponDamage=1.00,1.15,1.30,1.45,1.60,1.90,2.30,3.00
+			}
+			5 ^{
+				AverageRadius=0380
+				AverageSize=030
+				DamageSet=Energy,Decelerate,Drain
+				MaxDamage=025
+				MinDamage=012
+				MiningFactor=1
+				ShotType=Normal
+				Speed=085
+				TechLevel=05
+				kCost=03.0
+				mWeaponDamage=1.00,1.10,1.20,1.30,1.60,2.00,2.70,3.50
+			}
+			6 ^{
+				AverageRadius=0240
+				AverageSize=040
+				DamageSet=Energy
+				MaxDamage=030
+				MinDamage=020
+				MiningFactor=6
+				ShotType=Chain3
+				Speed=090
+				TechLevel=05
+				kCost=05.5
+				mWeaponDamage=1.00,1.10,1.15,1.20,1.25,1.30,1.50,1.80
+			}
+			7 ^{
+				AverageRadius=0340
+				AverageSize=060
+				DamageSet=Splinter
+				MaxDamage=040
+				MinDamage=010
+				MiningFactor=5
+				ShotType=Normal
+				Speed=075
+				TechLevel=05
+				kCost=20.0
+				mWeaponDamage=1.00,1.10,1.15,1.20,1.25,1.30,1.50,1.70
+			}
+			8 ^{
+				AverageRadius=0340
+				AverageSize=030
+				DamageSet=Energy,Destruct
+				MaxDamage=045
+				MinDamage=015
+				MiningFactor=2
+				ShotType=Normal
+				Speed=070
+				TechLevel=04
+				kCost=06.0
+				mWeaponDamage=1.00,1.10,1.20,1.30,1.40,1.50,1.60,1.70
+			}
+			9 ^{
+				AverageRadius=0300
+				AverageSize=070
+				DamageSet=Splinter
+				MaxDamage=045
+				MinDamage=020
+				MiningFactor=6
+				SecondaryDamageRadius=100
+				ShotType=Splash
+				Speed=050
+				TechLevel=06
+				kCost=30.0
+				mWeaponDamage=1.00,1.10,1.15,1.20,1.25,1.30,1.35,1.40
+			}
+        }
+    }
+    Satellite ^{
+    0 ^{
+	    0=2
+        1=2
+        2=2
+        Speed=2,2,2
+    }
+    1 ^{
+	    0=0
+        1=4
+        2=0
+        Speed=0,4,0
+    }
+    2 ^{
+	    0=0
+        1=4
+        2=4
+        Speed=0,4,4
+    }
+    3 ^{
+	    0=5
+        1=2
+        2=0
+        Speed=5,2,0
+    }
+    4 ^{
+	    0=5
+        1=5
+        2=5
+        Speed=5,5,5
+    }
+    5 ^{
+	    0=3
+        1=3
+        2=7
+        Speed=3,3,7
+    }
+	6 ^{
+	    0=10
+        1=4
+        2=3
+        Speed=10,4,6
+    }
+    7 ^{
+	    0=7
+        1=7
+        2=7
+        Speed=8,8,8
+    }
+}

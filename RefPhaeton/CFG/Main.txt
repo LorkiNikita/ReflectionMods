@@ -1,0 +1,23 @@
+Data ^{
+	SE ^{
+        Planet ^{
+            313 ^{
+                AtmColor=107,171,204
+                BG=Pluto
+				Cloud0=1.00,Bm.Planet2.C.120.b01
+                Image=Bm.Planet2.T.60.Pluto
+                ImageMap=Bm.Planet.M.0
+                PosZ=Planet
+                Quest=0
+                Radius=30
+                SmeImage=30,30
+                SmeImageMap=4,4
+                Space=30,90,110
+                Style=1,100
+            }
+        }
+    }
+    Script ^{
+        Mod_RefPhaeton=1,Script.Mod_RefPhaeton
+    }
+}
