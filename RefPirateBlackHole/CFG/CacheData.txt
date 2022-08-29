@@ -1,9 +1,0 @@
-Script ^{
-    Mod_PirateBlackHole=Mods\Reflection\RefPirateBlackHole\DATA\Script\Mod_PirateBlackHole.scr
-}
-Bm ^{
-    Captain ^{
-        2Peleng77a=Mods\Reflection\RefPirateBlackHole\DATA\Captain\2Peleng77.gai
-        2Peleng77i=Mods\Reflection\RefPirateBlackHole\DATA\Captain\2Peleng77.gi
-    }
-}

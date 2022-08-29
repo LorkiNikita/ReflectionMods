@@ -1,5 +1,15 @@
 **/*.ogg
 **/*.gi
 **/*.gai
+**/*.bmp
+ReflectionInstaller\SourceFiles
+**/*.exe
+**/*.ico
+**/*.cur
+**/*.png
+**/*.gif
+**/*.ani
+**/*.rtf
+**/*.7z
 RefMusic/DATA
 RefMusicTapok/DATA
